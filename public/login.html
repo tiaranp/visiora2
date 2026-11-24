@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk - VISIORA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'] },
+          colors: {
+            base: '#0A0A0C',
+            card: '#1C1C20',
+            field: '#2E2E33',
+            violet: { 500: '#8B5CF6', 600: '#7C3AED', 700: '#6D28D9' },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="back-navigation.css" />
+  <script src="back-navigation.js" defer></script>
+</head>
+<body class="font-sans text-white min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="w-full border-b border-white/5 bg-base/80 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="beranda.html#beranda" class="flex items-center gap-2 font-bold tracking-wide text-sm">
+        <svg class="w-4 h-4 text-violet-500" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4l9 16 9-16h-5l-4 7-4-7H3z"/></svg>
+        VISIORA
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs text-gray-300">
+        <a href="beranda.html#beranda" class="hover:text-white transition">Beranda</a>
+        <a href="beranda.html#kontak" class="hover:text-white transition">Kontak</a>
+        <a href="portofolio.html" class="hover:text-white transition">Portofolio</a>
+        <a href="layanan.html#layanan" class="hover:text-white transition">Layanan</a>
+        <a href="tim%20ahli.html#tim-ahli" class="hover:text-white transition">Tim Ahli</a>
+        <a href="tentang.html#tentang" class="hover:text-white transition">Tentang</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="menuBtn" class="md:hidden w-8 h-8 flex items-center justify-center text-gray-300" aria-label="Menu" aria-expanded="false">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <a href="profile.html" class="w-8 h-8 rounded-full bg-white/90 text-gray-700 flex items-center justify-center" aria-label="Profil">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav id="mobileNav" class="md:hidden px-6 text-sm text-gray-300">
+      <a href="beranda.html#beranda" class="block py-2 hover:text-white">Beranda</a>
+      <a href="beranda.html#kontak" class="block py-2 hover:text-white">Kontak</a>
+      <a href="portofolio.html" class="block py-2 hover:text-white">Portofolio</a>
+      <a href="layanan.html#layanan" class="block py-2 hover:text-white">Layanan</a>
+      <a href="tim%20ahli.html#tim-ahli" class="block py-2 hover:text-white">Tim Ahli</a>
+      <a href="tentang.html#tentang" class="block py-2 pb-4 hover:text-white">Tentang</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="relative flex-1 flex items-center justify-center px-4 py-16 bg-glow overflow-hidden">
+    <section class="card-enter relative z-10 w-full max-w-md bg-card/95 border border-white/5 rounded-2xl shadow-2xl shadow-black/50 px-8 py-9">
+      <!-- Ikon -->
+      <div class="flex justify-center">
+        <div class="w-9 h-9 rounded-lg bg-violet-600 flex items-center justify-center shadow-lg shadow-violet-600/40">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+      </div>
+
+      <h1 class="text-2xl font-bold text-center mt-4">Masuk ke VISIORA</h1>
+      <p class="text-[11px] text-gray-400 text-center mt-1">Akses portal klien dan manajemen proyek eksklusif.</p>
+
+      <form id="loginForm" class="mt-8 space-y-5" novalidate>
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-xs font-medium text-gray-300 mb-2">Alamat Email</label>
+          <div class="relative">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <input id="email" type="email" placeholder="nama@perusahaan.com" autocomplete="email"
+              class="input-field w-full bg-field text-sm placeholder-gray-500 rounded-lg pl-10 pr-3 py-3 outline-none border border-transparent focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 transition" />
+          </div>
+          <p id="emailError" class="hidden text-[11px] text-red-400 mt-1">Masukkan alamat email yang valid.</p>
+        </div>
+
+        <!-- Kata sandi -->
+        <div>
+          <label for="password" class="block text-xs font-medium text-gray-300 mb-2">Kata Sandi</label>
+          <div class="relative">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+            <input id="password" type="password" placeholder="••••••••••••" autocomplete="current-password"
+              class="input-field w-full bg-field text-sm placeholder-gray-500 rounded-lg pl-10 pr-10 py-3 outline-none border border-transparent focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 transition" />
+            <button type="button" id="togglePw" aria-label="Tampilkan kata sandi"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <p id="pwError" class="hidden text-[11px] text-red-400 mt-1">Kata sandi minimal 6 karakter.</p>
+        </div>
+
+        <!-- Ingat saya & lupa -->
+        <div class="flex items-center justify-between text-[11px]">
+          <label class="flex items-center gap-2 text-gray-400 cursor-pointer">
+            <input id="remember" type="checkbox" class="w-3.5 h-3.5 rounded bg-field border-gray-600 accent-violet-600" />
+            Ingat saya
+          </label>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 transition">Lupa kata sandi?</a>
+        </div>
+
+        <button type="submit" id="submitBtn"
+          class="flex items-center justify-center gap-2 w-full bg-violet-600 hover:bg-violet-700 active:scale-[.99] transition text-sm font-semibold py-3 rounded-lg shadow-lg shadow-violet-600/30">
+          Masuk
+        </button>
+      </form>
+
+      <p class="text-[11px] text-gray-300 text-center mt-8 leading-relaxed">
+        Belum punya akun?
+        <a href="index.html" class="font-semibold text-white hover:text-violet-400 transition">Daftar di sini.</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 bg-base">
+    <div class="max-w-6xl mx-auto px-6 pt-12 pb-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xs font-bold tracking-wide">VISIORA</h3>
+          <p class="text-[11px] text-gray-400 mt-3 leading-relaxed max-w-[200px]">
+            Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold mb-3">Navigation</h4>
+          <ul class="space-y-2 text-[11px] text-gray-400">
+            <li><a href="beranda.html#beranda" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="beranda.html#portofolio" class="hover:text-white transition">Portofolio</a></li>
+            <li><a href="layanan.html#layanan" class="hover:text-white transition">Layanan</a></li>
+            <li><a href="tentang.html#tentang" class="hover:text-white transition">Tentang</a></li>
+            <li><a href="beranda.html#kontak" class="hover:text-white transition">Kontak</a></li>
+            <li><a href="login.html" class="hover:text-white transition">Masuk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold mb-3">Socials</h4>
+          <ul class="space-y-2 text-[11px] text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-white transition">Twitter / X</a></li>
+            <li><a href="#" class="hover:text-white transition">Behance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold mb-3">Newsletter</h4>
+          <p class="text-[11px] text-gray-400 mb-3">Subscribe to our periodic design insights.</p>
+          <form id="newsletterForm" class="flex gap-2">
+            <input type="email" placeholder="Enter your email" required
+              class="flex-1 min-w-0 bg-field text-[11px] placeholder-gray-500 rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-violet-500/40" />
+            <button type="submit" class="bg-cyan-400 hover:bg-cyan-300 text-black text-[11px] font-semibold px-3 rounded-md transition">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-5 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-gray-500">
+        <p>© 2024 VISIORA Agency. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="login.js"></script>
+</body>
+</html>

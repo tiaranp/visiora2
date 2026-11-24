@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VISIORA — Aurora Finance | Studi Kasus Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+<!-- File CSS terpisah -->
+<link rel="stylesheet" href="p.aurora.css" />
+<link rel="stylesheet" href="back-navigation.css" />
+<script src="back-navigation.js" defer></script>
+</head>
+
+<body>
+
+<!-- =====================================================================
+     HTML (struktur halaman)
+     ===================================================================== -->
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="beranda.html#beranda" class="brand">
+      <span class="logo">VISIORA.</span>
+      <span class="home">Beranda</span>
+    </a>
+    <nav class="nav-links">
+      <a href="layanan.html#layanan">Layanan</a>
+      <a href="portofolio.html#portfolio-grid" class="active">Portofolio</a>
+      <a href="tentang.html#tentang">Tentang</a>
+      <a href="tim%20ahli.html#tim-ahli">Tim Ahli</a>
+      <a href="beranda.html#kontak">Kontak</a>
+      <a href="login.html" class="login">Masuk</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-top">
+      <a href="portofolio.html#portfolio-grid" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Kembali ke Galeri Portofolio
+      </a>
+      <span class="tag-pill"><span class="dot"></span>Fintech &amp; Wealth Management • 2024</span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Aurora Finance — Redesain Ekosistem Perbankan Desentral &amp; Wealth Management.</h1>
+        <p class="lead">
+          Kolaborasi strategis antara VISIORA dan Aurora Global Assets Pte. Ltd. menghadirkan arsitektur perbankan digital generasi baru. Menggabungkan telemetri multi-aset terpadu, keamanan biometrik instan terenkripsi kelas institusi, serta pengalaman visual bertaraf obsidian luxury untuk nasabah high-net-worth.
+        </p>
+      </div>
+      <aside class="side-card">
+        <div class="row"><span class="k">Kategori Klien</span><span class="v">Tier 1 Private Banking</span></div>
+        <div class="row"><span class="k">Rilis Platform</span><span class="v purple">Q2 2024 (Global)</span></div>
+      </aside>
+    </div>
+
+    <div class="info-grid">
+      <div><div class="lbl">Klien</div><div class="val">Aurora Global Assets</div><div class="sub">Singapura &amp; Jakarta</div></div>
+      <div><div class="lbl">Sektor</div><div class="val">Fintech &amp; Private Banking</div><div class="sub">Asset Management</div></div>
+      <div><div class="lbl">Durasi Proyek</div><div class="val">14 Minggu</div><div class="sub">Discovery hingga Hand-off</div></div>
+      <div><div class="lbl">Ruang Lingkup</div><div class="val">Design System &amp; UI/UX</div><div class="sub">Biometric Flow &amp; Tech Architecture</div></div>
+    </div>
+  </section>
+
+  <!-- ================= MOCKUP DASHBOARD ================= -->
+  <section class="mockup-wrap reveal">
+    <div class="mockup">
+      <div class="mock-bar">
+        <div class="mock-dots"><i></i><i></i><i></i></div>
+        <div class="mock-url">aurora.finance/vault/live-telemetry</div>
+        <div class="mock-badges">
+          <span class="mock-badge">🔒 AES-256 ENCRYPTED</span>
+          <span class="mock-badge purple">v4.8.2 PROD</span>
+        </div>
+      </div>
+
+      <div class="mock-grid">
+        <!-- kolom kiri -->
+        <div>
+          <div class="panel total">
+            <div class="total-head">
+              <span class="lbl">Total Konsolidasi Multi-Aset</span>
+              <span class="ytd">↗ +18.4% YTD</span>
+            </div>
+            <div class="balance">Rp 842.500.000,00</div>
+            <div class="balance-sub">Tersinkron ke 4 Rekening Vault Institusi &amp; 2 Cold-Storage Wallets</div>
+
+            <div class="chart-head">
+              <span>Performa 30 Hari Terakhir</span>
+              <b>Terakhir diperbarui <span id="lastUpdate">2</span> detik lalu</b>
+            </div>
+            <div class="bars" id="bars">
+              <div class="bar" style="height:38%"></div>
+              <div class="bar" style="height:34%"></div>
+              <div class="bar" style="height:46%"></div>
+              <div class="bar" style="height:42%"></div>
+              <div class="bar" style="height:52%"></div>
+              <div class="bar" style="height:50%"></div>
+              <div class="bar" style="height:46%"></div>
+              <div class="bar" style="height:58%"></div>
+              <div class="bar" style="height:54%"></div>
+              <div class="bar" style="height:68%"></div>
+              <div class="bar hl" style="height:82%"></div>
+              <div class="bar hl" style="height:100%"></div>
+            </div>
+          </div>
+
+          <div class="quick">
+            <div class="q">
+              <div class="ico p"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div>
+              <div class="t1">Kirim Instan</div><div class="t2">Latensi 0.04s</div>
+            </div>
+            <div class="q">
+              <div class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h13l-3-3M17 17H4l3 3"/></svg></div>
+              <div class="t1">Tukar Valas</div><div class="t2">Kurs Real-Time</div>
+            </div>
+            <div class="q">
+              <div class="ico o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+              <div class="t1">Vault Lock</div><div class="t2">Biometrik 3D</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- kolom kanan -->
+        <div>
+          <div class="credit">
+            <div class="top">
+              <span class="name">AURORA TITANIUM PRIVATE</span>
+              <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a7 7 0 0114 0M8 12.5a4 4 0 018 0M12 12.5v.01"/></svg></span>
+            </div>
+            <div class="num">•••• 8829 4182</div>
+            <div class="bottom">
+              <div><div class="l">Pemegang Kartu</div><div class="v">ADITYA PRATAMA</div></div>
+              <div style="text-align:right"><div class="l">Berlaku Hingga</div><div class="v">11/29</div></div>
+            </div>
+          </div>
+
+          <div class="bio">
+            <div class="fp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c0 3-1 5-2 7M8 8a5 5 0 019 2c0 2 0 4-1 6M5 11a7 7 0 0112-5M12 15c0 2 0 3-1 5M17 15c0 2-.5 3-1 4"/></svg></div>
+            <div class="tx"><b>Otorisasi Biometrik Aktif</b><span>FaceID &amp; Enkripsi Secure Enclave</span></div>
+            <span class="live"></span>
+          </div>
+
+          <div class="activity">
+            <div class="head"><span>Aktivitas Vault Seketika</span><span class="all-label">Semua</span></div>
+            <div class="act">
+              <span class="n"><svg class="out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>Transfer ke Bank Sentral</span>
+              <span class="amt neg">-Rp 45.000.000</span>
+            </div>
+            <div class="act">
+              <span class="n"><svg class="in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7L7 17M16 17H7V8"/></svg>Dividen Treasury Global</span>
+              <span class="amt pos">+Rp 12.840.000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3 PILAR ================= -->
+  <section class="block reveal">
+    <div class="eyebrow">Inovasi Desain &amp; Rekayasa</div>
+    <h2 class="sec-title">3 Pilar Transformasi Antarmuka Aurora Finance</h2>
+
+    <div class="pillars">
+      <article class="pillar">
+        <div class="ico p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.3 17a10 10 0 1117.4 0"/></svg></div>
+        <h3>Latensi Nol &amp; Sinkronisasi 0.04 Detik</h3>
+        <p>Kami merekonstruksi alur visual transmisi data keuangan menggunakan arsitektur WebSocket mikro, memastikan nasabah melihat konfirmasi eksekusi transaksi tanpa jeda buffering.</p>
+        <div class="foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>99.99% Guaranteed Throughput</div>
+      </article>
+
+      <article class="pillar">
+        <div class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Alur Biometrik &amp; Enkripsi AES-256</h3>
+        <p>Penggantian OTP konvensional dengan UX otorisasi berbasis sensor biometrik perangkat. Mengurangi tingkat friksi transaksi sebesar 73% sambil memenuhi standar keamanan perbankan internasional.</p>
+        <div class="foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Zero-Friction Identity Protocol</div>
+      </article>
+
+      <article class="pillar">
+        <div class="ico o"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2zM19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14z"/></svg></div>
+        <h3>Obsidian Design System Eksklusif</h3>
+        <p>Membangun 180+ token desain komponen atomik dengan rasio kontras bersertifikasi WCAG AAA. Dirumuskan khusus untuk menjaga kenyamanan mata analis selama jam trading intensif.</p>
+        <div class="foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Multi-Platform Cross-Device</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= METRIK ================= -->
+  <section class="metrics-box reveal">
+    <div class="eyebrow">Dampak Nyata</div>
+    <h2>Metrik Kuantitatif Pasca Peluncuran</h2>
+    <p class="sub">Performa produk selama 6 bulan pertama implementasi penuh.</p>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="big g1">Rp<br />842.5M+</div>
+        <div class="name">Total Aset Terpantau Real-time</div>
+        <div class="desc">Peningkatan 3.4x volume transaksi aktif per hari dibandingkan platform lama.</div>
+      </div>
+      <div class="metric">
+        <div class="big g2">0.04 Detik</div>
+        <div class="name">Latensi Transaksi Rata-rata</div>
+        <div class="desc">Eksekusi kilat yang meminimalkan slippage pasar pada trading valas dan crypto.</div>
+      </div>
+      <div class="metric">
+        <div class="big g3">+180%</div>
+        <div class="name">Akuisisi Investor High-Net-Worth</div>
+        <div class="desc">Peningkatan kepercayaan klien premium berkat antarmuka prestisius dan transparan.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECH STACK ================= -->
+  <section class="block reveal">
+    <div class="tech-head">
+      <div>
+        <div class="eyebrow">Teknologi &amp; Alat</div>
+        <h2 class="sec-title">Tech Stack Terintegrasi</h2>
+      </div>
+      <p class="desc">Dirancang dari fondasi desain berbasis token hingga integrasi API finansial latensi rendah.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M5 5l4 4M19 5l-4 4M3 12h6M15 12h6M5 19l4-4M19 19l-4-4M12 16v6"/></svg>
+        <div class="n">Figma</div><div class="r">Design &amp; Prototype</div>
+      </div>
+      <div class="tech">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg>
+        <div class="n">Tokens Studio</div><div class="r">Sync Variabel Token</div>
+      </div>
+      <div class="tech">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+        <div class="n">React 19</div><div class="r">Frontend Engine</div>
+      </div>
+      <div class="tech">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 00-2 2v4a2 2 0 01-2 2 2 2 0 012 2v4a2 2 0 002 2h1M16 3h1a2 2 0 012 2v4a2 2 0 002 2 2 2 0 00-2 2v4a2 2 0 01-2 2h-1"/></svg>
+        <div class="n">TypeScript</div><div class="r">Type-Safe Logic</div>
+      </div>
+      <div class="tech">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="10" r="1"/><path d="M12 21a2.5 2.5 0 010-5h1.5a2 2 0 000-4"/></svg>
+        <div class="n">Tailwind CSS</div><div class="r">Utility Styling</div>
+      </div>
+      <div class="tech">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6a3 3 0 010 6H9zM9 10h7a3 3 0 010 6H9zM9 4v12M11 2v2M14 2v2M11 16v2M14 16v2"/></svg>
+        <div class="n">Web3 APIs</div><div class="r">Multi-Vault Connect</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONI ================= -->
+  <section class="testi reveal">
+    <div class="av">99</div>
+    <div>
+      <blockquote>"VISIORA tidak sekadar mendesain antarmuka; mereka menata ulang cara nasabah privat kami berinteraksi dengan kekayaan mereka. Ketepatan detail pada visual biometrik dan sistem mikro-interaksi memberikan rasa aman sekaligus prestise yang belum pernah ada sebelumnya."</blockquote>
+      <div class="who"><b>Jonathan Vance</b><i>•</i>VP of Digital Product, Aurora Global Assets Pte. Ltd.</div>
+    </div>
+  </section>
+
+  <!-- ================= PROYEK BERIKUTNYA ================= -->
+  <section class="next reveal">
+    <div>
+      <div class="eb">Proyek Portofolio Berikutnya</div>
+      <h4>Kopi Senja — Rebranding &amp; E-Commerce Nusantara
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </h4>
+      <p>Identitas visual baru untuk jaringan kedai kopi lokal, dari logo sampai kemasan.</p>
+    </div>
+    <a class="btn-ghost" href="p.kopisenja.html">Lihat Studi Kasus</a>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta reveal">
+    <h2>Siap Mengembangkan Produk Fintech Anda?</h2>
+    <p>Mari diskusikan visi Anda bersama tim arsitek produk dan desainer elit VISIORA. Kami menghadirkan standar kelas dunia tanpa kompromi.</p>
+    <div class="btns">
+      <a class="btn-primary" href="tim%20ahli.html#tim-ahli">Mulai Proyek</a>
+      <a class="btn-outline" href="jadwal.html">Jadwalkan Konsultasi</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo">VISIORA.</div>
+        <p>© 2024 VISIORA. Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</p>
+      </div>
+      <nav class="foot-links">
+        <a href="beranda.html#beranda">Beranda</a>
+        <a href="portofolio.html#portfolio-grid" class="active">Portofolio</a>
+        <a href="layanan.html#layanan">Layanan</a>
+        <a href="tentang.html#tentang">Tentang</a>
+        <a href="beranda.html#kontak">Kontak</a>
+        <a href="login.html">Masuk</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>Arsitektur Antarmuka &amp; Rekayasa Pengalaman Digital Berstandar Internasional.</span>
+      <span class="status"><i></i>Semua Sistem Beroperasi Normal</span>
+    </div>
+  </div>
+</footer>
+
+<!-- File JavaScript terpisah -->
+<script src="p.aurora.js"></script>
+</body>
+</html>

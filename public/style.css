@@ -1,0 +1,135 @@
+/* ==========================================================
+   VISIORA - style.css
+   Gaya tambahan di luar Tailwind (animasi, state, komponen)
+   ========================================================== */
+
+:root {
+  --bg-base: #0a0a0c;
+  --violet: #7c3aed;
+  --cyan: #22d3ee;
+  --danger: #f87171;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Latar glow ---------- */
+.bg-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 400px at 8% 25%, rgba(124, 58, 237, .28), transparent 70%),
+    radial-gradient(500px 400px at 95% 75%, rgba(34, 211, 238, .10), transparent 70%);
+  animation: glowPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { opacity: .75; }
+  to   { opacity: 1; }
+}
+
+/* ---------- Kartu login muncul halus ---------- */
+.card-enter {
+  animation: cardIn .6s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px) scale(.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Input ---------- */
+.input-field {
+  transition: border-color .2s, box-shadow .2s, background-color .2s;
+}
+
+.input-field.is-error {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, .18);
+}
+
+/* Autofill browser tetap gelap */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #2e2e33 inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Getar saat error */
+.shake { animation: shake .4s; }
+
+@keyframes shake {
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+/* ---------- Tombol loading ---------- */
+.btn-loading { pointer-events: none; opacity: .85; }
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, .35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Toast ---------- */
+#toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  max-width: 320px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #1c1c20;
+  border: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .3s, transform .3s;
+}
+
+#toast.show { opacity: 1; transform: none; }
+#toast.success { border-left: 3px solid #34d399; }
+#toast.error   { border-left: 3px solid var(--danger); }
+
+/* ---------- Menu mobile ---------- */
+#mobileNav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+
+#mobileNav.open { max-height: 400px; }
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: #2e2e33; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+::selection { background: rgba(124, 58, 237, .5); }
+
+/* ---------- Aksesibilitas ---------- */
+:focus-visible { outline: 2px solid var(--violet); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

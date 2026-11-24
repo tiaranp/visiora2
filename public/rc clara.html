@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA - Room Chat Konsultasi: Clara Santoso</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="rcclara.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="logo"><span class="logo__dot"></span>VISIORA</a>
+
+      <nav class="nav" id="nav">
+        <a href="#">Beranda</a>
+        <a href="#" class="active">Tim Ahli</a>
+        <a href="#">Layanan</a>
+        <a href="#">Portofolio</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+      </nav>
+
+      <div class="navbar__right">
+        <span class="pill pill--live"><i class="dot dot--green"></i>Ruang Konsultasi Aktif</span>
+        <a href="profile.html" class="icon-btn icon-btn--round" aria-label="Profil">
+          <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+          <svg viewBox="0 0 24 24" class="ico"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ================= BREADCRUMB ================= -->
+    <div class="crumb">
+      <div class="crumb__left">
+        <a href="#" class="crumb__back">
+          <svg viewBox="0 0 24 24" class="ico"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          Kembali ke Tim Ahli
+        </a>
+        <span class="crumb__sep">/</span>
+        <strong>Sesi Konsultasi Desain Eksklusif</strong>
+      </div>
+      <span class="pill pill--secure">
+        <svg viewBox="0 0 24 24" class="ico"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        Sesi Terenkripsi End-to-End &amp; Dilindungi NDA
+      </span>
+    </div>
+
+    <div class="layout">
+
+      <!-- ================= CHAT PANEL ================= -->
+      <section class="chat card" aria-label="Ruang chat konsultasi">
+
+        <!-- Chat header -->
+        <div class="chat__head">
+          <div class="chat__who">
+            <div class="avatar">
+              <img src="images/Clara Santoso.jpg" alt="Clara Santoso" onerror="this.remove()" />
+              <span class="avatar__fallback">CS</span>
+              <i class="dot dot--green avatar__status"></i>
+            </div>
+            <div>
+              <div class="chat__name">
+                Clara Santoso
+                <span class="badge badge--rating">★ 99% Rating</span>
+              </div>
+              <div class="chat__role">BRAND STRATEGIST <span class="chat__avail">• Tersedia Sekarang</span></div>
+            </div>
+          </div>
+
+          <div class="chat__actions">
+            <button class="icon-btn" aria-label="Panggilan video">
+              <svg viewBox="0 0 24 24" class="ico"><rect x="3" y="6" width="12" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3"/></svg>
+            </button>
+            <button class="icon-btn" aria-label="Dokumen">
+              <svg viewBox="0 0 24 24" class="ico"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>
+            </button>
+            <button class="icon-btn" aria-label="Folder berkas">
+              <svg viewBox="0 0 24 24" class="ico"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </button>
+            <button class="btn btn--ghost btn--sm" id="closeSession">
+              <svg viewBox="0 0 24 24" class="ico"><path d="M9 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h4M16 8l4 4-4 4M20 12H9"/></svg>
+              Tutup Sesi
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat__body" id="chatBody">
+
+          <div class="msg msg--in">
+            <div class="bubble">
+              Halo, saya Clara. Mari mulai dengan memahami audiens, posisi brand Anda di pasar, dan hal yang membuat bisnis Anda berbeda.
+            </div>
+          </div>
+
+          <div class="msg msg--out">
+            <div class="msg__meta"><span>10:48 WIB</span> <strong>Anda (Founder &amp; CMO)</strong></div>
+            <div class="bubble">
+              Kami akan meluncurkan layanan FinTech baru. Bagaimana cara menentukan positioning yang membedakan kami dari kompetitor dan relevan bagi pelanggan?
+              <div class="bubble__status">
+                <svg viewBox="0 0 24 24" class="ico"><path d="M2 13l5 5L18 7M12 17l1 1L23 7"/></svg>
+                Terkirim &amp; Dibaca
+              </div>
+            </div>
+          </div>
+
+          <div class="msg msg--in msg--with-avatar">
+            <div class="avatar avatar--sm"><span class="avatar__fallback">CS</span></div>
+            <div class="msg__col">
+              <div class="msg__meta msg__meta--left">
+                <strong>Clara Santoso</strong> <span class="tag-director">Brand Strategist</span> <span>10:52 WIB</span>
+              </div>
+              <div class="bubble">
+                Kita bisa mulai dengan riset pelanggan dan audit kompetitor untuk menemukan kebutuhan yang belum terlayani. Temuannya akan menjadi dasar positioning, pesan utama, dan arah narasi brand Anda.
+
+                <div class="concept">
+                  <div class="concept__head">
+                    <span>
+                      <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+                      Temuan Awal: Arah Positioning Brand
+                    </span>
+                    <b class="concept__ver">CONCEPT V1.2</b>
+                  </div>
+                  <div class="concept__grid">
+                    <div class="thumb thumb--ui">
+                      <i></i><i></i><i></i>
+                    </div>
+                    <div class="thumb thumb--crystal"></div>
+                    <div class="thumb thumb--dash">
+                      <i></i><i></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick replies -->
+        <div class="quick">
+          <span class="quick__label">Saran Cepat:</span>
+          <button class="chip" data-text="Bantu kami menentukan positioning untuk audiens utama.">Tentukan Positioning</button>
+          <button class="chip" data-text="Bagaimana cara meriset pelanggan dan kompetitor?">Riset Pasar</button>
+          <button class="chip" data-text="Saya ingin menyusun pesan utama brand kami.">Pesan Brand</button>
+        </div>
+
+        <!-- Composer -->
+        <div class="composer">
+          <div class="composer__box">
+            <button class="icon-btn icon-btn--bare" aria-label="Lampirkan berkas">
+              <svg viewBox="0 0 24 24" class="ico"><path d="M21 12l-8.5 8.5a5 5 0 0 1-7-7L14 5a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L15 8"/></svg>
+            </button>
+            <button class="icon-btn icon-btn--bare" aria-label="Lampirkan gambar">
+              <svg viewBox="0 0 24 24" class="ico"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-9 9"/></svg>
+            </button>
+            <button class="icon-btn icon-btn--bare" aria-label="Pesan suara">
+              <svg viewBox="0 0 24 24" class="ico"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+            </button>
+            <textarea id="msgInput" rows="1" placeholder="Tulis pesan atau pertanyaan desain Anda untuk Clara Santoso..."></textarea>
+            <button class="send" id="sendBtn" aria-label="Kirim pesan">
+              <svg viewBox="0 0 24 24" class="ico ico--fill"><path d="M3 11.5L21 3l-8.5 18-2.2-7.3z"/></svg>
+            </button>
+          </div>
+          <div class="composer__foot">
+            <span class="safe">
+              <svg viewBox="0 0 24 24" class="ico"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+              Kerahasiaan data dilindungi NDA VISIORA
+            </span>
+            <span class="hint">Tekan <kbd>Enter</kbd> untuk kirim, <kbd>Shift+Enter</kbd> baris baru</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SIDEBAR ================= -->
+      <aside class="side">
+
+        <!-- Profil ahli -->
+        <div class="card profile">
+          <div class="profile__photo">
+            <img src="images/Clara Santoso.jpg" alt="Clara Santoso" onerror="this.remove()" />
+            <span class="badge badge--rating profile__rating">★ 99% Rating</span>
+            <span class="pill pill--open"><i class="dot dot--green"></i>Konsultasi Terbuka</span>
+          </div>
+
+          <div class="profile__role">BRAND STRATEGIST</div>
+          <h1 class="profile__name">Clara Santoso</h1>
+          <p class="profile__bio">Membantu brand korporat dan startup unicorn merumuskan positioning unik, narasi, dan arah visual jangka panjang</p>
+
+          <div class="tags">
+            <span>Brand Positioning</span>
+            <span>Market Research</span>
+            <span>Visual Direction</span>
+          </div>
+
+          <div class="stats">
+            <div>
+              <small>Pengalaman:</small>
+              <strong>14 Tahun</strong>
+            </div>
+            <div>
+              <small>Proyek Selesai:</small>
+              <strong class="accent">52 Elite</strong>
+            </div>
+          </div>
+
+          <blockquote class="quote">
+            "Brand yang hebat tidak hanya didengar, tetapi diyakini sebagai standar industri."
+          </blockquote>
+
+          <button class="btn btn--primary btn--block btn--lg" id="pickExpert">
+            Pilih Ahli Ini
+            <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- Detail sesi -->
+        <div class="card session">
+          <div class="session__head">
+            <h2>
+              <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Detail Sesi Konsultasi
+            </h2>
+            <span class="badge badge--green">Sesi 1 Aktif</span>
+          </div>
+
+          <dl class="session__list">
+            <div><dt>Paket Konsultasi:</dt><dd>Brand Strategy Alignment</dd></div>
+            <div><dt>Durasi Tersisa:</dt><dd class="accent" id="timer">38 Menit</dd></div>
+            <div><dt>Akses Dokumen Proyek:</dt><dd>Full NDA &amp; IP Protection</dd></div>
+          </dl>
+
+          <button class="btn btn--outline btn--block" id="uploadNda">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 14h6M10 18h4"/></svg>
+            Unggah Dokumen NDA Perusahaan
+          </button>
+          <a class="btn btn--teal btn--block" id="upgrade" href="payment.html?expert=clara">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>
+            Tingkatkan ke Proyek Penuh
+          </a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <input type="file" id="fileNda" accept=".pdf,.doc,.docx" hidden />
+
+  <script src="rcclara.js"></script>
+</body>
+</html>

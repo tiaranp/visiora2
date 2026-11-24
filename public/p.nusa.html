@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NusaTravel — Portofolio VISIORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="p.nusa.css" />
+  <link rel="stylesheet" href="back-navigation.css" />
+  <script src="back-navigation.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">VISIORA<span class="logo-dot">•</span></a>
+      <nav class="nav-links">
+        <a href="#">Beranda</a>
+        <a href="#">Kontak</a>
+        <a href="#" class="active">Portofolio</a>
+        <a href="#">Layanan</a>
+        <a href="#">Tim Ahli</a>
+        <a href="#">Tentang</a>
+        <a href="#">Masuk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero container">
+      <div class="hero-top">
+        <a href="portofolio.html#portfolio-grid" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Kembali ke Galeri Portofolio
+        </a>
+        <span class="badge-tag"><i class="dot-green"></i>TravelTech &amp; Ekspedisi Maritim • 2024</span>
+      </div>
+
+      <h1 class="hero-title">NusaTravel — Platform Reservasi Ekspedisi Kapal Phinisi &amp; Navigasi Wisata Bahari.</h1>
+      <p class="hero-desc">Rekayasa arsitektur digital VISIORA untuk platform pemesanan ekspedisi kepulauan terpencil (Raja Ampat, Komodo, Banda Neira) dengan telemetri navigasi rute GPS satelit dan sinkronisasi tiket offline Apple Wallet.</p>
+
+      <div class="meta-box">
+        <div class="meta-item"><span class="meta-label">Klien</span><strong>PT Nusa Maritim Wisata</strong></div>
+        <div class="meta-item"><span class="meta-label">Sektor</span><strong class="cyan">Maritime &amp; Luxury Travel</strong></div>
+        <div class="meta-item"><span class="meta-label">Durasi</span><strong>12 Minggu Rekayasa</strong></div>
+        <div class="meta-item"><span class="meta-label">Ruang Lingkup</span><strong>UI/UX, IoT Telemetry, Mobile Pass</strong></div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/hero-phinisi.jpg" alt="Kapal Phinisi di perairan kepulauan saat senja" onerror="this.style.display='none'" />
+        <div class="telemetry-card">
+          <div class="tele-head">
+            <span class="tele-label"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.55a11 11 0 0 1 14 0M8.5 16a6 6 0 0 1 7 0M12 20h.01"/></svg> LIVE TELEMETRY STARLINK LINK</span>
+            <span class="tele-ping">Active Ping <b id="ping">31ms</b></span>
+          </div>
+          <h3>Selat Dampier Corridor</h3>
+          <p>Lat: -0.5840° S • Long: 130.4558° E | Arus tenang: 1.2 knot | Ombak: 0.4m</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KATALOG ===================== -->
+    <section class="catalog container reveal">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">DESTINASI &amp; EKSPEDISI TERINTEGRASI</span>
+          <h2>Katalog Pelayaran &amp; Rute Eksklusif</h2>
+        </div>
+        <p class="section-sub">Sistem pemesanan kabin modular multi-deck secara dinamis dengan layout visual interaktif 3D deck view.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-img img-raja">
+            <img src="images/raja-ampat.webp" alt="Raja Ampat" onerror="this.style.display='none'" />
+            <span class="duration">7 Hari / 6 Malam</span>
+          </div>
+          <div class="card-body">
+            <div class="route"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Sorong • Mansuar • Piaynemo • Wayag</div>
+            <h3>Raja Ampat Ultimate Island Cruise</h3>
+            <p>Ekspedisi labuh jangkar di teluk terisolasi dengan akses perizinan konservasi adat terjamin dan pemanduan selam bersertifikasi PADI Master.</p>
+            <div class="card-foot"><span class="price">Mulai Rp 38.500.000 /pax</span><span class="avail">Tersedia ›</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img img-komodo">
+            <img src="images/komodo-island.webp" alt="Taman Nasional Komodo" onerror="this.style.display='none'" />
+            <span class="duration">4 Hari / 3 Malam</span>
+          </div>
+          <div class="card-body">
+            <div class="route"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Labuan Bajo • Padar • Komodo • Manta Point</div>
+            <h3>Komodo National Park Safari</h3>
+            <p>Eksplorasi satwa endemik purba, berenang bersama pari manta di karang terumbu terawat, dan menikmati sunset di atas dek Phinisi.</p>
+            <div class="card-foot"><span class="price">Mulai Rp 18.200.000 /pax</span><span class="avail">Tersedia ›</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img img-banda">
+            <img src="images/banda-neira.webp" alt="Banda Neira" onerror="this.style.display='none'" />
+            <span class="duration">8 Hari / 7 Malam</span>
+          </div>
+          <div class="card-body">
+            <div class="route"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Ambon • Pulau Run • Banda • Hatta</div>
+            <h3>Banda Neira Spice Islands Expedition</h3>
+            <p>Jejak ekspedisi kolonial jalur rempah dunia, benteng kuno abad ke-17, serta jurang laut dalam dengan keanekaragaman lumba-lumba dan paus.</p>
+            <div class="card-foot"><span class="price">Mulai Rp 42.000.000 /pax</span><span class="avail">Tersedia ›</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PETA MARITIM ===================== -->
+    <section class="map-section container reveal">
+      <div class="map-panel">
+        <div class="map-text">
+          <div class="map-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          </div>
+          <h3>Peta Maritim Interaktif &amp; Sensor Cuaca Kelautan</h3>
+          <p>Sistem visualisasi koordinat laut live terintegrasi Mapbox GL JS dan API satelit BMKG maritim. Calon penumpang dapat memeriksa prediksi pasang surut air, kecepatan angin, dan gelombang di setiap titik singgah sebelum menyelesaikan reservasi.</p>
+          <ul class="checklist">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4a0" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Telemetri Satelit Starlink terpasang pada armada Phinisi</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4a0" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Pelacakan rute GPS real-time untuk keluarga di daratan</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4a0" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Sinkronisasi Tiket Digital Apple Wallet &amp; Google Wallet NFC</li>
+          </ul>
+        </div>
+
+        <div class="map-mock">
+          <div class="mock-bar">
+            <span class="wd r"></span><span class="wd y"></span><span class="wd c"></span>
+            <span class="mock-title">NusaTravel Navigation Deck v2.4</span>
+            <span class="live-gps"><i class="dot-cyan"></i>LIVE GPS FEED</span>
+          </div>
+          <div class="mock-map">
+
+
+          <div class="mock-map">
+  <img src="images/Navigation2.webp" alt="Peta rute Sorong ke Wayag" />
+  <span class="map-label l1">Sorong Harbour</span>
+  <span class="map-label l2">Wayag Bay (Target)</span>
+</div>
+
+
+            <span class="map-label l1">Sorong Harbour</span>
+            <span class="map-label l2">Wayag Bay (Target)</span>
+          </div>
+          <div class="mock-stats">
+            <div class="stat"><span>Kecepatan Angin</span><b id="wind">8.4 Knot <small>(Barat Laut)</small></b></div>
+            <div class="stat"><span>Tinggi Gelombang</span><b class="cyan">0.4 – 0.7 Meter <small>(Aman)</small></b></div>
+            <div class="stat"><span>Suhu Permukaan Laut</span><b id="temp">28.9 °C</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HASIL ===================== -->
+    <section class="results container reveal">
+      <div class="center-head">
+        <span class="eyebrow">DAMPAK NYATA SOLUSI VISIORA</span>
+        <h2>Hasil &amp; Metrik Kuantitatif Terukur</h2>
+        <p>Transformasi digital menyeluruh yang melipatgandakan kecepatan pelancong high-net-worth internasional terhadap pelayaran laut Nusantara.</p>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="m-icon c1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+          <div class="m-num grad-cyan"><span class="count" data-to="100" data-prefix="" data-suffix="%">100%</span></div>
+          <h4>Terhubung Satelit di Laut Lepas</h4>
+          <p>Data manifest penumpang, izin pelabuhan, dan sinkronisasi rute offline-first berfungsi sempurna bahkan di titik perairan terdalam tanpa sinyal GSM konvensional.</p>
+        </div>
+        <div class="metric">
+          <div class="m-icon c2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div class="m-num grad-purple"><span class="count" data-to="310" data-prefix="+" data-suffix="%">+310%</span></div>
+          <h4>Konversi Checkout Reservasi</h4>
+          <p>Alur booking 3-langkah yang memvisualisasikan denah ranjang kabin kapal secara akurat meningkatkan tingkat konversi pembayaran penuh secara dramatis.</p>
+        </div>
+        <div class="metric">
+          <div class="m-icon c3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="m-num grad-cyan"><span class="count" data-to="0" data-prefix="" data-suffix=" Rupiah">0 Rupiah</span></div>
+          <h4>Biaya Gaib &amp; Tersembunyi</h4>
+          <p>Rincian komprehensif mencakup donasi konservasi karang, biaya lisensi KSDP, hingga asuransi evakuasi maritim dicantumkan secara transparan di awal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEKNOLOGI ===================== -->
+    <section class="tech container reveal">
+      <div class="tech-panel">
+        <div class="tech-head">
+          <div>
+            <span class="eyebrow small">INFRASTRUKTUR &amp; ARSITEKTUR</span>
+            <h3>Teknologi Rekayasa Terapan</h3>
+          </div>
+          <p>Penerapan standar modern frontend &amp; sistem satelit IoT</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.2"><path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></svg><b>Figma</b><span>Design System</span></div>
+          <div class="tech-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4e0" stroke-width="2.2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg><b>Mapbox GL JS</b><span>Maritime Carto</span></div>
+          <div class="tech-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><b>Vue 3</b><span>Reaktivitas UI</span></div>
+          <div class="tech-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e5b" stroke-width="2.2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg><b>Supabase</b><span>PostgreSQL &amp; Edge</span></div>
+          <div class="tech-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"><path d="M4 8h16M4 16h16M8 4v16"/></svg><b>Tailwind CSS</b><span>Obsidian Theme</span></div>
+          <div class="tech-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="2.2"><rect x="2" y="6" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg><b>Apple Wallet</b><span>PassKit Offline</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONI ===================== -->
+    <section class="testi container reveal">
+      <div class="testi-panel">
+        <div class="quote-icon">99</div>
+        <blockquote>"VISIORA merevolusi cara tamu mancanegara menikmati pesona bahari Indonesia. Integrasi visual peta maritim dan sistem boarding pass offline Apple Wallet membuktikan bahwa platform pariwisata maritim lokal sanggup bersaing dengan standar teknologi ultra-luxury global."</blockquote>
+        <div class="author"><b>Capt. Raden Haryo Prabowo</b><span>Direktur Operasional, PT Nusa Maritim Wisata</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== NAV PROYEK ===================== -->
+    <section class="proj-nav container">
+      <a href="#" class="proj prev">
+        <span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+        <div><small>Proyek Sebelumnya</small><b>Kopi Senja Rebrand</b></div>
+      </a>
+      <a href="#" class="proj next">
+        <div><small>Proyek Selanjutnya</small><b>Aurora Finance App</b></div>
+        <span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta container reveal" id="cta">
+      <div class="cta-panel">
+        <h2>Siap Mengembangkan Platform Reservasi &amp; Travel Anda?</h2>
+        <p>Mari rancang pengalaman digital berdaya pikat tinggi dengan rekayasa teknologi presisi untuk bisnis ekspedisi Anda bersama VISIORA.</p>
+        <div class="cta-btns">
+          <a href="tim%20ahli.html#tim-ahli" class="btn-primary">Mulai Proyek</a>
+          <a href="jadwal.html" class="btn-outline">Jadwalkan Konsultasi</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="f-left">
+        <b>VISIORA</b>
+        <p>© 2024 VISIORA. Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</p>
+      </div>
+      <nav class="f-links">
+        <a href="#">Beranda</a>
+        <a href="#" class="active">Portofolio</a>
+        <a href="#">Layanan</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+        <a href="#">Masuk</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="p.nusa.js"></script>
+</body>
+</html>

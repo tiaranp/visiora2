@@ -1,0 +1,634 @@
+/* ================= RESET & VARIABEL ================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #121214;
+  --card: #1c1c1e;
+  --card-2: #232326;
+  --text: #e8e8ea;
+  --muted: #b5b5bb;
+  --cyan: #3ad4f2;
+  --purple: #6a0fd6;
+  --purple-light: #8b5cf6;
+  --radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 26px 32px;
+  background: var(--bg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+}
+
+.nav-links a {
+  font-size: 10px;
+  color: var(--muted);
+  transition: color 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: #d8d8d8;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ================= TOMBOL ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.btn-primary {
+  background: var(--purple);
+  padding: 12px 28px;
+}
+
+.btn-primary:hover {
+  background: #7a1ff0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(106, 15, 214, 0.45);
+}
+
+.btn-sm {
+  padding: 10px 18px;
+  font-size: 9.5px;
+}
+
+/* ================= INTRO ================= */
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px 60px;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 36px 0 30px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  color: var(--cyan);
+  margin-bottom: 8px;
+}
+
+.eyebrow.center {
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.intro-right {
+  max-width: 320px;
+  font-size: 9.5px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ================= OVERVIEW ================= */
+.overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: var(--card);
+  border-radius: 8px;
+  padding: 26px 24px;
+  margin-bottom: 40px;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 9.5px;
+  color: var(--muted);
+  transition: color 0.25s, transform 0.25s;
+}
+
+.overview-item:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.overview-item .num {
+  color: var(--cyan);
+  font-size: 9.5px;
+}
+
+/* ================= KARTU LAYANAN ================= */
+.service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 56px 56px;
+  margin-bottom: 40px;
+  scroll-margin-top: 80px;
+}
+
+.service-card.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.badge {
+  background: var(--purple);
+  color: #fff;
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.estimasi {
+  color: var(--cyan);
+  font-size: 9.5px;
+}
+
+.service-text h2 {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.desc {
+  font-size: 9.5px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 22px;
+  max-width: 255px;
+}
+
+.label {
+  font-size: 9.5px;
+  letter-spacing: 0.4px;
+  color: #d0d0d4;
+  margin-bottom: 10px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  margin-bottom: 22px;
+  max-width: 270px;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 9px;
+  color: #d5d5d9;
+  line-height: 1.4;
+}
+
+.check {
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 1px;
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+  position: relative;
+}
+
+.check::after {
+  content: "";
+  position: absolute;
+  left: 2.5px;
+  top: 1px;
+  width: 2px;
+  height: 4px;
+  border: solid var(--cyan);
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  max-width: 290px;
+}
+
+.process div {
+  background: var(--card-2);
+  border-radius: 4px;
+  padding: 8px 8px 9px;
+  font-size: 9.5px;
+  font-weight: 500;
+  color: #fff;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.process div:hover {
+  background: #2d2d32;
+  transform: translateY(-2px);
+}
+
+.process span {
+  display: block;
+  color: var(--cyan);
+  font-size: 8.5px;
+  font-weight: 400;
+}
+
+/* Gambar layanan */
+.service-img {
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 230px;
+  background: linear-gradient(135deg, #2a1a4a 0%, #14141a 60%, #0e3a46 100%);
+}
+
+.service-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-img img {
+  transform: scale(1.04);
+}
+
+/* ================= METODOLOGI ================= */
+.methodology {
+  padding: 56px 0 30px;
+  text-align: center;
+}
+
+.method-title {
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 36px;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+
+.method-card {
+  position: relative;
+  background: var(--card);
+  border-radius: 8px;
+  padding: 26px 22px 30px;
+  min-height: 110px;
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.method-card:hover {
+  transform: translateY(-4px);
+  background: #212125;
+}
+
+.big-num {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 30px;
+  font-weight: 300;
+  color: #3a3a3e;
+}
+
+.method-card h4 {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.method-card p {
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ================= CTA ================= */
+.cta {
+  margin-top: 50px;
+  padding: 62px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #1b1b1e 0%, #1f3238 50%, #1b1b1e 100%);
+  scroll-margin-top: 80px;
+}
+
+.cta h3 {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.cta p {
+  max-width: 300px;
+  margin: 0 auto 22px;
+  font-size: 9.5px;
+  color: var(--muted);
+}
+
+.cta .btn-primary {
+  padding: 14px 34px;
+  border-radius: 4px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+  gap: 30px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px 32px 60px;
+  font-size: 9px;
+}
+
+.footer h5 {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  font-size: 10px !important;
+}
+
+.footer p {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 190px;
+}
+
+.footer ul li {
+  margin-bottom: 7px;
+}
+
+.footer ul a {
+  color: var(--muted);
+  transition: color 0.25s;
+}
+
+.footer ul a:hover {
+  color: #fff;
+}
+
+.newsletter {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;
+  background: #2a2a2e;
+  border: 1px solid #3a3a3f;
+  border-radius: 3px;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 8.5px;
+  color: #fff;
+  outline: none;
+}
+
+.newsletter input:focus {
+  border-color: var(--cyan);
+}
+
+.btn-join {
+  background: var(--cyan);
+  color: #06222a;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.25s;
+}
+
+.btn-join:hover {
+  filter: brightness(1.1);
+}
+
+#newsletterMsg {
+  display: block;
+  margin-top: 8px;
+  color: var(--cyan);
+  font-size: 8.5px;
+}
+
+/* ================= ANIMASI REVEAL ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-top: 1px solid #2a2a2e;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-links.open {
+    max-height: 360px;
+  }
+
+  .nav-links a {
+    padding: 14px 32px;
+    font-size: 11px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .intro {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card,
+  .service-card.reverse {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+
+  .service-card.reverse .service-img {
+    order: 2;
+  }
+
+  .desc,
+  .features,
+  .process {
+    max-width: 100%;
+  }
+
+  .method-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar,
+  main,
+  .footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .method-grid,
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-actions .btn-sm {
+    display: none;
+  }
+}

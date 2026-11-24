@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="daftar.css" />
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- ================= KIRI: INFO ================= -->
+    <section class="intro">
+      <div class="batch">
+        <span class="batch__a"><i class="dot"></i>AKTIVASI KLIEN BATCH Q2 2025</span>
+        <span class="batch__b">Slot Eksklusif Terbuka</span>
+      </div>
+
+      <h1 class="intro__title">
+        Bergabung dengan
+        <span class="grad">Ekosistem Kreatif Elit</span>
+        VISIORA
+      </h1>
+      <p class="intro__lead">
+        Akses instan ke kurator senior, alokasi sprint prioritas, NDA otomatis, dan dashboard manajemen proyek real-time dengan standar estetika internasional.
+      </p>
+
+      <div class="features">
+        <article class="feat">
+          <span class="feat__ico">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <div>
+            <h3>NDA Bilateral Terintegrasi Instan</h3>
+            <p>Seluruh aset proprietary, konsep produk, dan data bisnis dilindungi klausul kerahasiaan hukum tingkat tinggi.</p>
+          </div>
+        </article>
+
+        <article class="feat">
+          <span class="feat__ico">
+            <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <div>
+            <h3>Prioritas Alokasi Sprint 48 Jam</h3>
+            <p>Penugasan tim kreatif spesialis dan creative director tanpa antrean perantara agensi tradisional.</p>
+          </div>
+        </article>
+
+        <article class="feat">
+          <span class="feat__ico">
+            <svg viewBox="0 0 24 24" class="ico"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+          </span>
+          <div>
+            <h3>Private Portal &amp; Real-time Canvas</h3>
+            <p>Review revisi frame-by-frame, delivery file format lossless (Figma, Raw 4K, 3D files), dan pelacakan milestone.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="policy">
+        <div class="policy__tag">
+          <svg viewBox="0 0 24 24" class="ico"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+          KEBIJAKAN FINANSIAL TRANSPARAN
+        </div>
+        <h3>Pendaftaran Akun Tanpa Memasukkan Data Kartu</h3>
+        <p>Formulir ini hanya membuat akun klien. Pembayaran akan diproses melalui gateway tokenisasi setelah provider dikonfigurasi; nomor kartu dan CVV tidak disimpan oleh aplikasi.</p>
+      </article>
+
+      <article class="review">
+        <div class="review__rate">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <small>5,0 VIP Client Rating</small>
+        </div>
+        <blockquote>
+          "Kolaborasi tercepat dengan standar visual kelas dunia. Dalam hitungan hari, portal VISIORA merevolusi cara kami mendevelop identitas brand global kami."
+        </blockquote>
+        <div class="review__who">
+          <span class="avatar">DS</span>
+          <div>
+            <strong>Darmawan Satria</strong>
+            <small>Chief Brand Officer, Kinetix AI</small>
+          </div>
+        </div>
+      </article>
+
+      <div class="trust">
+        <span>
+          <svg viewBox="0 0 24 24" class="ico"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+          Enkripsi TLS 256-bit
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+          PCI-DSS Compliant
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" class="ico"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+          Automated RDA
+        </span>
+      </div>
+    </section>
+
+    <!-- ================= KANAN: FORM ================= -->
+    <section class="signup" aria-labelledby="formTitle">
+      <div class="signup__head">
+        <span class="signup__ico">
+          <svg viewBox="0 0 24 24" class="ico"><circle cx="10" cy="8" r="4"/><path d="M3 20c0-3.5 3-6 7-6M18 14v6M15 17h6"/></svg>
+        </span>
+        <div>
+          <h2 id="formTitle">Buat Akun Baru <span class="tier">Tier Eksklusif</span></h2>
+          <p>Buat kredensial akun untuk mengakses portal manajemen proyek. Informasi pembayaran dikelola terpisah.</p>
+        </div>
+      </div>
+
+      <form id="signupForm" novalidate>
+
+        <!-- Bagian 1 -->
+        <div class="sec">
+          <span>1. IDENTITAS</span>
+          <span class="req">* Wajib diisi</span>
+        </div>
+
+        <label class="field">
+          <span class="field__label">Nama Lengkap</span>
+          <span class="input">
+            <svg viewBox="0 0 24 24" class="ico"><rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="12" cy="11" r="2.2"/><path d="M8 17c.8-2 2.2-3 4-3s3.2 1 4 3"/></svg>
+            <input type="text" id="fullName" autocomplete="name" />
+          </span>
+          <small class="err" data-for="fullName"></small>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Alamat Email Perusahaan / Bisnis</span>
+          <span class="input">
+            <svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <input type="email" id="email" autocomplete="email" />
+          </span>
+          <small class="err" data-for="email"></small>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Nomor Telepon</span>
+          <span class="input">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M11 18h2"/></svg>
+            <input type="tel" id="phone" autocomplete="tel" inputmode="tel" maxlength="32" required />
+          </span>
+          <small class="err" data-for="phone"></small>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Alamat</span>
+          <span class="input input--textarea">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <textarea id="address" autocomplete="street-address" rows="2" maxlength="1000" required></textarea>
+          </span>
+          <small class="err" data-for="address"></small>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Bank Pilihan</span>
+          <span class="input">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M3 10h18M5 10v9M9 10v9M15 10v9M19 10v9M3 20h18M12 3l9 5H3z"/></svg>
+            <select id="preferredBank">
+              <option value="" selected disabled>Pilih bank</option>
+              <option value="BCA">BCA</option>
+              <option value="BNI">BNI</option>
+              <option value="BRI">BRI</option>
+            </select>
+          </span>
+          <small class="field__hint">Tersimpan sebagai preferensi pembayaran. Nomor kartu dan masa berlaku tidak dimasukkan saat pendaftaran.</small>
+        </label>
+
+        <div class="row">
+          <label class="field">
+            <span class="field__label">Kata Sandi</span>
+            <span class="input">
+              <svg viewBox="0 0 24 24" class="ico"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H21M18 12v3M15 12v2"/></svg>
+              <input type="password" id="password" autocomplete="new-password" />
+              <button type="button" class="eye" id="togglePw" aria-label="Tampilkan kata sandi">
+                <svg viewBox="0 0 24 24" class="ico"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Konfirmasi Kata Sandi</span>
+            <span class="input">
+              <svg viewBox="0 0 24 24" class="ico"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+              <input type="password" id="confirm" autocomplete="new-password" />
+            </span>
+          </label>
+        </div>
+
+        <div class="secure">
+          <svg viewBox="0 0 24 24" class="ico"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <p><strong>Pembayaran aman.</strong> Formulir pendaftaran tidak meminta atau menyimpan data kartu. Pembayaran memerlukan gateway tokenisasi yang dikonfigurasi terpisah.</p>
+        </div>
+
+        <label class="agree">
+          <input type="checkbox" id="agree" />
+          <span class="agree__box">
+            <svg viewBox="0 0 24 24" class="ico"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+          </span>
+          <span>Saya menyetujui <a href="#">Syarat Ketentuan Layanan</a> &amp; <a href="#">Kebijakan Privasi</a> VISIORA serta menandatangani mutual NDA otomatis untuk proteksi kerahasiaan materi kerja.</span>
+        </label>
+        <small class="err" data-for="agree"></small>
+
+        <button type="submit" class="submit" id="submitBtn">
+          <span class="submit__text">Daftar &amp; Aktivasi Akun Klien</span>
+          <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+
+
+        <p class="login">Sudah memiliki akun? <a href="login.html">Masuk ke Akun</a></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <strong class="footer__logo">VISIORA</strong>
+        <p>© 2025 VISIORA Creative Agency. All rights reserved. Platform Manajemen Eksklusif.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Syarat &amp; Ketentuan</a>
+        <a href="#">Bantuan Portal</a>
+        <a href="#">Kurator Tim</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="daftar.js"></script>
+</body>
+</html>

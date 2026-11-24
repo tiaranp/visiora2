@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA - Pembayaran Virtual Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="pay.va.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-certificate"></i></span>
+      <span class="logo-text">VISIORA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#">Beranda</a>
+      <a href="#">Kontak</a>
+      <a href="#">Portofolio</a>
+      <a href="#">Layanan</a>
+      <a href="#">Tim Ahli</a>
+      <a href="#">Tentang</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn-start">Mulai Proyek</a>
+      <button class="btn-user" aria-label="Akun"><i class="fa-regular fa-user"></i></button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <a href="#" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Ringkasan Proyek</a>
+      <div class="badges">
+        <span class="badge badge-wait"><span class="dot"></span> MENUNGGU PEMBAYARAN</span>
+        <span class="badge badge-secure"><i class="fa-solid fa-lock"></i> Enkripsi 256-bit Terproteksi</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="eyebrow"><span class="dot-purple"></span> LANGKAH AKHIR PEMBAYARAN KONSULTASI</div>
+        <h1>Selesaikan Pembayaran <span class="gradient-text">Virtual Account</span></h1>
+        <p>Kunci kalender kickoff eksklusif dan alokasi tim desain VISIORA Studio dengan menyelesaikan pembayaran sebelum batas waktu berakhir.</p>
+      </div>
+
+      <div class="timer-card">
+        <div class="timer-head">
+          <span class="timer-title"><i class="fa-regular fa-clock"></i> BATAS WAKTU PEMBAYARAN</span>
+          <span class="timer-date">28 Okt 2026, 14:30 WIB</span>
+        </div>
+        <div class="timer-boxes">
+          <div class="t-box"><strong id="hours">23</strong><span>JAM</span></div>
+          <div class="t-box"><strong id="minutes">59</strong><span>MENIT</span></div>
+          <div class="t-box"><strong id="seconds">30</strong><span>DETIK</span></div>
+          <div class="t-box t-id"><strong>ID</strong><span>INSTAN</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content grid -->
+    <section class="grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="left-col">
+
+        <!-- Payment card -->
+        <div class="card pay-card">
+          <div class="bank-head">
+            <div class="bank-left">
+              <div class="bank-logo" id="vaBankLogo">VA</div>
+              <div>
+                <h3 id="vaBankName">Memuat bank pilihan...</h3>
+                <p>Metode Pembayaran Resmi VISIORA</p>
+              </div>
+            </div>
+            <span class="auto-badge"><i class="fa-solid fa-circle-check"></i> Auto Terverifikasi</span>
+          </div>
+
+          <div class="inner-box">
+            <div class="inner-top">
+              <span class="label">NOMOR VIRTUAL ACCOUNT</span>
+              <span class="company">VISIORA Creative Lab</span>
+            </div>
+            <div class="inner-main">
+              <div class="va-number" id="vaNumber">Memuat nomor Virtual Account...</div>
+              <button class="btn-copy" id="copyVA" disabled><i class="fa-regular fa-copy"></i> <span>Salin VA</span></button>
+            </div>
+          </div>
+
+          <div class="inner-box">
+            <div class="inner-top">
+              <span class="label">TOTAL PEMBAYARAN TEPAT</span>
+              <span class="warn">Harus Tepat Hingga 3 Digit Terakhir</span>
+            </div>
+            <div class="inner-main">
+              <div class="amount"><small>Rp</small>45.000.000</div>
+              <button class="btn-copy" id="copyAmount"><i class="fa-regular fa-money-bill-1"></i> <span>Salin Jumlah</span></button>
+            </div>
+          </div>
+
+          <div class="notice">
+            <i class="fa-solid fa-bolt"></i>
+            <p><strong>Verifikasi Sistem Instan:</strong> Pembayaran Anda akan otomatis terdeteksi dalam 1-3 menit. Anda tidak perlu mengunggah struk atau bukti transfer manual.</p>
+          </div>
+        </div>
+
+        <!-- Guide card -->
+        <div class="card guide-card">
+          <div class="guide-head">
+            <h2><i class="fa-solid fa-book-open"></i> Panduan Transfer Bank</h2>
+            <span class="method" id="vaMethodName">Memuat preferensi bank...</span>
+          </div>
+
+          <div class="tabs" id="tabs">
+            <button class="tab" data-tab="BCA" disabled>Bank Central Asia (BCA)</button>
+            <button class="tab" data-tab="BNI" disabled>Bank Negara Indonesia (BNI)</button>
+            <button class="tab" data-tab="BRI" disabled>Bank Rakyat Indonesia (BRI)</button>
+            <button class="tab" data-tab="other" disabled>Bank Lain (BTN/BSI/MANDIRI/DII)</button>
+          </div>
+
+          <div class="steps" id="steps">Memuat bank pilihan...</div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="right-col">
+        <div class="card order-card">
+          <div class="order-top">
+            <div>
+              <span class="label">ID REFERENSI PESANAN</span>
+              <div class="order-id">#VSR-2026-8891</div>
+            </div>
+            <span class="escrow-tag">Escrow Retainer</span>
+          </div>
+
+          <div class="package">
+            <span class="pkg-label">Paket Desain &amp; Transformasi Digital</span>
+            <h3>Brand Strategy Alignment &amp; Web Experience</h3>
+          </div>
+
+          <div class="director">
+            <div class="avatar" data-checkout-expert-initials>VA</div>
+            <div>
+              <strong data-checkout-expert-name>Tim Ahli VISIORA</strong>
+              <span data-checkout-expert-role>Project Lead VISIORA</span>
+            </div>
+          </div>
+
+          <ul class="items">
+            <li><span>Subtotal Jasa Kreatif</span><b>Rp 45.000.000</b></li>
+            <li><span>Pajak Pertambahan Nilai (PPN 11%)</span><b>Rp 4.950.000</b></li>
+            <li>
+              <span>Diskon Kolaborasi Awal<em class="promo">Promo</em></span><b>Rp -2.500.000</b></li>
+            </li>
+          </ul>
+
+          <div class="total-row">
+            <span>Total Pembayaran Tagihan</span>
+            <strong>Rp 47.450.000</strong>
+          </div>
+
+          <button class="btn-primary" id="checkStatus"><i class="fa-solid fa-rotate"></i> <span>Konfirmasi Pembayaran</span></button>
+
+          <div class="btn-row">
+            <button class="btn-ghost"><i class="fa-solid fa-right-left"></i> Ganti Metode</button>
+            <button class="btn-ghost"><i class="fa-solid fa-headset"></i> Bantuan Klien</button>
+          </div>
+
+          <div class="escrow-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            <p>Dana Anda ditampung di rekening escrow resmi hingga sesi penandatanganan brief kickoff selesai dilakukan.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Feature cards -->
+    <section class="features">
+      <div class="feature">
+        <div class="f-icon f-purple"><i class="fa-solid fa-paper-plane"></i></div>
+        <div>
+          <h4>Aktivasi Langsung</h4>
+          <p>Kanal komunikasi Notion &amp; Slack pribadi proyek dibuka seketika setelah mutasi diterima.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="f-icon f-cyan"><i class="fa-solid fa-file-invoice"></i></div>
+        <div>
+          <h4>Faktur Pajak &amp; Invoice Resmi</h4>
+          <p>Invoice berstempel elektronik (e-Meterai) dan bukti potong pajak otomatis diteruskan ke email PIC.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="f-icon f-orange"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h4>Jaminan Kerahasiaan (NDA)</h4>
+          <p>Perjanjian kerahasiaan pra-kickoff berlaku efektif mengikat VISIORA Creative Studio secara penuh.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-certificate"></i></span>
+          <span class="logo-text">VISIORA</span>
+        </a>
+        <p>Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</p>
+      </div>
+      <div class="f-col">
+        <h5>NAVIGATION</h5>
+        <a href="#">Beranda</a>
+        <a href="#">Portofolio</a>
+        <a href="#">Layanan</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+        <a href="#">Masuk</a>
+      </div>
+      <div class="f-col">
+        <h5>SOCIALS</h5>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Behance</a>
+      </div>
+      <div class="f-col">
+        <h5>NEWSLETTER</h5>
+        <p class="news-text">Subscribe to our periodic design insights.</p>
+        <form class="news-form" id="newsForm">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 VISIORA. Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</span>
+      <div class="legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Security Escrow</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="payment-expert.js"></script>
+  <script src="pay.va.js"></script>
+</body>
+</html>

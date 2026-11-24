@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA - Kurator Visi & Talenta Kelas Dunia</title>
+
+  <!-- Font & Icon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="timahli.css" />
+  <link rel="stylesheet" href="back-navigation.css" />
+  <script src="back-navigation.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <a href="beranda.html#beranda" class="logo">
+      <i class="fa-solid fa-gem logo-icon"></i>
+      <span>VISIORA</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="beranda.html#beranda">Beranda</a>
+      <a href="portofolio.html">Portofolio</a>
+      <a href="layanan.html#layanan">Layanan</a>
+      <a href="#tim-ahli">Tim Ahli</a>
+      <a href="tentang.html#tentang">Tentang</a>
+      <a href="beranda.html#kontak">Kontak</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="profile.html" class="avatar-btn" aria-label="Profil"><i class="fa-regular fa-user"></i></a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="beranda">
+      <div class="glow glow-purple"></div>
+      <div class="glow glow-teal"></div>
+
+      <div class="hero-left">
+        <span class="badge"><span class="dot"></span> KURATOR &amp; TIM AHLI KELAS DUNIA</span>
+        <h1>Kurator Visi &amp;<br /><span class="accent">Talenta Kelas Dunia</span></h1>
+        <p>
+          VISIORA handpicks elite senior designers, design directors, and creative technologists
+          for each client project based on deep specialization, aesthetic alignment, and
+          uncompromising execution standards.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="stat-card">
+          <div class="stat-top">
+            <span>GLOBAL EXPERT POOL</span>
+            <i class="fa-regular fa-circle-check"></i>
+          </div>
+          <h2>45+ Elite Talenta</h2>
+          <p>Terkurasi dari studio desain global ternama.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DIREKTORI ================= -->
+    <section class="directory" id="tim-ahli">
+      <div class="directory-head">
+        <div class="directory-title">
+          <h3>Direktori Pakar &amp; Kurator</h3>
+          <p>Pilih spesialisasi yang sesuai dengan visi estetika dan kebutuhan teknis proyek Anda.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Semua Ahli</button>
+          <button class="filter-btn" data-filter="design-directors">Design Directors</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX Architects</button>
+          <button class="filter-btn" data-filter="brand">Brand Strategists</button>
+          <button class="filter-btn" data-filter="motion">3D &amp; Motion</button>
+        </div>
+      </div>
+
+      <div class="cards" id="cards">
+
+        <!-- Card 1 -->
+        <article class="card" data-category="design-directors">
+          <div class="photo">
+            <img src="images/Alexander Vance.jpg" alt="Alexander Vance" onerror="this.style.display='none'" />
+            <span class="rating"><i class="fa-solid fa-star"></i> 99% Rating</span>
+          </div>
+          <div class="card-body">
+            <span class="role">DESIGN DIRECTOR</span>
+            <h4>Alexander Vance</h4>
+            <p class="desc">Mantan Lead Designer di agensi top Eropa, ahli dalam membangun identitas visual brand</p>
+            <div class="tags"><span>Luxury Branding</span><span>Art Direction</span></div>
+            <div class="meta">
+              <span>Pengalaman: <b>12 Tahun</b></span>
+              <span>Proyek Selesai: <b>38 Elite</b></span>
+            </div>
+            <blockquote>"Desain bukan sekadar estetika, melainkan instrumen psikologis untuk mendefinisikan otoritas brand."</blockquote>
+
+            <a class="btn btn-primary btn-block" href="rcalex.html">Pilih Ahli Ini <i class="fa-solid fa-arrow-right"></i></a>
+
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-category="uiux">
+          <div class="photo">
+            <img src="images/Nadira Kencana.jpg" alt="Nadira Kencana" onerror="this.style.display='none'" />
+            <span class="rating"><i class="fa-solid fa-star"></i> 99% Rating</span>
+          </div>
+          <div class="card-body">
+            <span class="role">PRINCIPAL UI/UX ARCHITECT</span>
+            <h4>Nadira Kencana</h4>
+            <p class="desc">Spesialis arsitektur informasi kompleks, design systems skala enterprise, dan produk digital fintech</p>
+            <div class="tags"><span>Design Systems</span><span>Fintech UX</span></div>
+            <div class="meta">
+              <span>Pengalaman: <b>9 Tahun</b></span>
+              <span>Proyek Selesai: <b>45 Elite</b></span>
+            </div>
+            <blockquote>"Kenyamanan tertinggi lahir dari kesederhanaan struktur yang dirancang tanpa kompromi."</blockquote>
+            <a class="btn btn-primary btn-block" href="rcnadira.html">Pilih Ahli Ini <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-category="motion">
+          <div class="photo">
+            <img src="images/Julian Rasyid.jpg" alt="Julian Rasyid" onerror="this.style.display='none'" />
+            <span class="rating"><i class="fa-solid fa-star"></i> 99% Rating</span>
+          </div>
+          <div class="card-body">
+            <span class="role">3D &amp; MOTION ARTIST</span>
+            <h4>Julian Rasyid</h4>
+            <p class="desc">Pakar WebGL, Three.js, dan sinematografi digital yang menghidupkan produk fisik ke layar interaktif</p>
+            <div class="tags"><span>WebGL &amp; Motion</span><span>3D Interactive</span></div>
+            <div class="meta">
+              <span>Pengalaman: <b>10 Tahun</b></span>
+              <span>Proyek Selesai: <b>29 Elite</b></span>
+            </div>
+            <blockquote>"Gerak dan ruang adalah dimensi tambahan yang mengubah interaksi pasif menjadi pengalaman emosional."</blockquote>
+
+            <a class="btn btn-primary btn-block" href="rcjulian.html">Pilih Ahli Ini <i class="fa-solid fa-arrow-right"></i></a>
+
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" data-category="brand">
+          <div class="photo">
+            <img src="images/Clara Santoso.jpg" alt="Clara Santoso" onerror="this.style.display='none'" />
+            <span class="rating"><i class="fa-solid fa-star"></i> 99% Rating</span>
+          </div>
+          <div class="card-body">
+            <span class="role">BRAND STRATEGIST</span>
+            <h4>Clara Santoso</h4>
+            <p class="desc">Membantu brand korporat dan startup unicorn merumuskan positioning unik, narasi, dan arah visual jangka panjang</p>
+            <div class="tags"><span>Brand Positioning</span><span>Market Research</span></div>
+            <div class="meta">
+              <span>Pengalaman: <b>14 Tahun</b></span>
+              <span>Proyek Selesai: <b>52 Elite</b></span>
+            </div>
+            <blockquote>"Brand yang hebat tidak hanya didengar, tetapi diyakini sebagai standar industri."</blockquote>
+
+            <a class="btn btn-primary btn-block" href="rcclara.html">Pilih Ahli Ini <i class="fa-solid fa-arrow-right"></i></a>
+
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card" data-category="motion uiux">
+          <div class="photo">
+            <img src="images/Marcus Wijaya.jpg" alt="Marcus Wijaya" onerror="this.style.display='none'" />
+            <span class="rating"><i class="fa-solid fa-star"></i> 99% Rating</span>
+          </div>
+          <div class="card-body">
+            <span class="role">CREATIVE TECHNOLOGIST</span>
+            <h4>Marcus Wijaya</h4>
+            <p class="desc">Menghubungkan batas antara desain visual tingkat lanjut dan rekayasa frontend performa tinggi</p>
+            <div class="tags"><span>Creative Dev</span><span>Interactive UI</span></div>
+            <div class="meta">
+              <span>Pengalaman: <b>11 Tahun</b></span>
+              <span>Proyek Selesai: <b>41 Elite</b></span>
+            </div>
+            <blockquote>"Teknologi terbaik adalah yang terasa ajaib namun berfungsi tanpa cela."</blockquote>
+
+            <a class="btn btn-primary btn-block" href="rcmarcus.html">Pilih Ahli Ini <i class="fa-solid fa-arrow-right"></i></a>
+
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card" data-category="uiux">
+          <div class="photo">
+            <img src="images/Saskia Putri.jpg" alt="Saskia Putri" onerror="this.style.display='none'" />
+            <span class="rating"><i class="fa-solid fa-star"></i> 99% Rating</span>
+          </div>
+          <div class="card-body">
+            <span class="role">INTERACTION DESIGNER</span>
+            <h4>Saskia Putri</h4>
+            <p class="desc">Ahli dalam desain mikro-interaksi, ergonomi digital, dan riset pengguna mendalam untuk produk skala besar</p>
+            <div class="tags"><span>Micro-interactions</span><span>User Research</span></div>
+            <div class="meta">
+              <span>Pengalaman: <b>8 Tahun</b></span>
+              <span>Proyek Selesai: <b>34 Elite</b></span>
+            </div>
+            <blockquote>"Setiap klik dan transisi harus memberikan kepuasan intuitif kepada pengguna."</blockquote>
+
+            <a class="btn btn-primary btn-block" href="rcsaskia.html">Pilih Ahli Ini <i class="fa-solid fa-arrow-right"></i></a>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= SISTEM MATCHING ================= -->
+    <section class="matching" id="layanan">
+      <span class="eyebrow">SISTEM MATCHING PROYEK</span>
+      <h3>Bagaimana Kami Membentuk Tim Anda</h3>
+      <p class="matching-desc">
+        Pendekatan kurasi personal yang memastikan kecocokan mutlak antara budaya brand dan keahlian spesifik talenta.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h4>Analisis Kebutuhan &amp; Kultur Brand</h4>
+          <p>Kami menganalisis target audiens, skala kompleksitas teknis, serta nilai estetika yang ingin dicapai oleh brand Anda secara mendalam.</p>
+          <a href="#kontak" class="step-link"><i class="fa-regular fa-chart-bar"></i> Audit &amp; Briefing</a>
+        </div>
+
+        <div class="step">
+          <span class="num">02</span>
+          <h4>Kurasi Kurator &amp; Pertemuan Discovery</h4>
+          <p>Direktur kreatif kami memilih talenta terbaik dari direktori untuk mengikuti sesi *discovery* awal, memastikan chemistry visi yang selaras.</p>
+          <a href="#kontak" class="step-link"><i class="fa-solid fa-users"></i> Discovery Session</a>
+        </div>
+
+        <div class="step">
+          <span class="num">03</span>
+          <h4>Penugasan Tim Eksklusif</h4>
+          <p>Tim khusus dibentuk, dilengkapi dengan roadmap eksekusi terstruktur dan akses langsung ke dashboard manajemen proyek VISIORA.</p>
+          <a href="#kontak" class="step-link"><i class="fa-solid fa-rocket"></i> Kick-off &amp; Eksekusi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta" id="kontak">
+      <div class="cta-box">
+        <span class="eyebrow">MULAI KOLABORASI EKSKLUSIF</span>
+        <h3>Wujudkan Visi Brand Anda Bersama Tim Pilihan</h3>
+        <p>Jadwalkan konsultasi privat dengan kepala kurator kami untuk merancang susunan tim ahli yang paling ideal bagi proyek Anda.</p>
+        <div class="cta-buttons">
+
+          <a href="jadwal.html" class="btn btn-primary cta-btn"><i class="fa-regular fa-calendar"></i> <span>Jadwalkan<br />Konsultasi</span></a>
+          <a href="#portofolio" class="btn btn-dark cta-btn"><span>Lihat Portofolio<br />Lengkap</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="tentang">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>VISIORA</h5>
+        <p>Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</p>
+      </div>
+
+      <div class="footer-col">
+        <h6>Navigation</h6>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#tim-ahli">Tim Ahli</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h6>Socials</h6>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h6>Newsletter</h6>
+        <p class="news-text">Subscribe to our periodic design insights.</p>
+        <form class="newsletter" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn-join">Join</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="timahli.js"></script>
+</body>
+</html>

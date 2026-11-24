@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISIORA - Konfirmasi Jadwal Sesi Kreatif</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- =====================================================
+     BAGIAN 1 : CSS (dipisah ke css/style.css)
+     ===================================================== -->
+<link rel="stylesheet" href="p.konfirmasi.css">
+<link rel="stylesheet" href="back-navigation.css">
+<script src="back-navigation.js" defer></script>
+</head>
+
+<body>
+
+<!-- =====================================================
+     BAGIAN 2 : HTML
+     ===================================================== -->
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="logo"><span class="logo-mark"><i data-lucide="layers"></i></span>VISIORA</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#">Beranda</a>
+      <a href="#" class="active">Layanan</a>
+      <a href="#">Portofolio</a>
+      <a href="#">Tim Ahli</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="profile.html" class="icon-btn" aria-label="Profil"><i data-lucide="user"></i></a>
+      <button class="icon-btn burger" id="burger" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="#">Beranda</a><span class="sep">/</span>
+    <a href="#">Dashboard Proyek (#VSR-2024-ENT)</a><span class="sep">/</span>
+    <a href="#">Jadwal</a><span class="sep">/</span>
+    <span class="current">Konfirmasi Sesi</span>
+  </nav>
+
+  <!-- Header -->
+  <section class="page-head">
+    <div class="head-left">
+      <div class="head-icon">
+        <i data-lucide="calendar-check"></i>
+        <span class="badge"><i data-lucide="check"></i></span>
+      </div>
+      <div>
+        <span class="status-chip"><i data-lucide="sparkles"></i>SESI DIKUNCI, TERJADWAL &amp; TERKONFIRMASI</span>
+        <h1>Sesi Kreatif Berhasil Dijadwalkan!</h1>
+        <p>Undangan kalender dan tautan ruang virtual telah dikirimkan ke email peserta. Sesi ini telah ditautkan ke lini masa proyek <b>#VSR-2024-ENT</b></p>
+      </div>
+    </div>
+    <button class="btn-outline" id="btnPdf"><i data-lucide="download"></i>Unduh E-Pass (PDF)</button>
+  </section>
+
+  <div class="layout">
+
+    <!-- ========== KOLOM KIRI ========== -->
+    <div>
+      <article class="card ticket">
+        <div class="ticket-body">
+          <div class="ticket-top">
+            <div>
+              <span class="eyebrow">Sprint 01 Kickoff Review</span>
+              <h2>Discovery &amp; Strategy Alignment</h2>
+              <p class="sub">Konsultasi Teknis: Review Arsitektur Visual &amp; Komposisi Sistem</p>
+            </div>
+            <div class="code-box">
+              <small>ID Reservasi / Kode Sesi</small>
+              <span class="code-chip" id="sessionCode">#SCH-2024-VSR-092</span>
+            </div>
+          </div>
+
+          <div class="grid2">
+            <div class="inner info">
+              <div class="ico"><i data-lucide="calendar-days"></i></div>
+              <div>
+                <div class="lbl">WAKTU PERTEMUAN</div>
+                <div class="val">Rabu, 30 Oktober 2024</div>
+                <div class="val2">10:00 – 11:30 WIB (90 Menit)</div>
+              </div>
+            </div>
+            <div class="inner info">
+              <div class="ico cy"><i data-lucide="video"></i></div>
+              <div>
+                <div class="lbl">FORMAT PERTEMUAN</div>
+                <div class="val">Google Meet Terenkripsi</div>
+                <div class="val2 violet">+ Figma Live Interaktif Sync</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-label">Peserta &amp; Kurator yang Hadir</div>
+          <div class="grid2">
+            <div class="inner">
+              <div class="box-title"><i data-lucide="users"></i>Tim Kreatif &amp; Tim Kurator (VISIORA)</div>
+              <div class="person"><div class="avatar">RP</div><div><b>Raditya Putra</b><span>Lead Art Director &amp; UI Architect</span></div></div>
+              <div class="person"><div class="avatar">AP</div><div><b>Aura Pratama</b><span>Lead Strategist &amp; Account Exec.</span></div></div>
+            </div>
+            <div class="inner">
+              <div class="box-title cy"><i data-lucide="briefcase"></i>Peserta Perwakilan Klien</div>
+              <div class="person"><div class="avatar cy">AL</div><div><b>Aura Lestari Pratama</b><span>PT Lumina Teknologi Nusantara</span></div></div>
+              <div class="mail"><i data-lucide="mail"></i>aura.lestari@lumina.id</div>
+            </div>
+          </div>
+
+          <div class="section-label">Agenda &amp; Topik Bahasan Utama</div>
+          <ul class="agenda">
+            <li><span class="no">1</span>Sinkronisasi arsitektur visual &amp; identitas brand Lumina dengan tren luxury tech global.</li>
+            <li><span class="no">2</span>Review deliverable Sprint 1 (wireframing interaktif) &amp; penetapan master token desain UI.</li>
+            <li><span class="no">3</span>Sesi tanya jawab interaktif, penetapan roadmap implementasi, dan checkpoint berikutnya.</li>
+          </ul>
+
+          <div class="actions">
+            <button class="act meet" id="btnMeet"><i data-lucide="video"></i>Masuk Ruang Google Meet</button>
+            <button class="act" id="btnCopy"><i data-lucide="copy"></i>Salin Tautan</button>
+            <button class="act" id="btnGcal"><i data-lucide="calendar"></i>Google Cal</button>
+            <button class="act" id="btnIcal"><i data-lucide="calendar-plus"></i>iCal / Outlook</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Resources -->
+      <section class="resources">
+        <div class="res">
+          <i data-lucide="file-text" class="big"></i>
+          <b>Brief Agenda Kickoff</b><span>PDF • 2.4 MB</span>
+          <a href="#" data-toast="Mengunduh Brief Agenda Kickoff..."><i data-lucide="download"></i>Unduh Dokumen</a>
+        </div>
+        <div class="res">
+          <i data-lucide="figma" class="big"></i>
+          <b>Master Design Tokens</b><span>Figma Token Set v1.2</span>
+          <a href="#" data-toast="Membuka Figma Token Set..."><i data-lucide="external-link"></i>Buka di Figma</a>
+        </div>
+        <div class="res">
+          <i data-lucide="sticker" class="big" style="color:#F59E0B"></i>
+          <b>Figma Jam Live Board</b><span>Interaktif Kolaboratif</span>
+          <a href="#" data-toast="Membuka Figma Jam Board..."><i data-lucide="external-link"></i>Kunjungi Board</a>
+        </div>
+      </section>
+
+      <section class="note">
+        <h4><i data-lucide="info"></i>Catatan Teknis Pertemuan:</h4>
+        <ul>
+          <li>Harap gunakan koneksi internet stabil (minimal 10 Mbps) serta perangkat desktop untuk kenyamanan navigasi prototipe Figma resolusi tinggi.</li>
+          <li>Rekaman sesi visual dan transkripsi AI otomatis akan diarsipkan dan dapat diakses kembali langsung di Dashboard Proyek dalam 1 jam setelah sesi berakhir.</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="side">
+      <div class="card">
+        <h3><i data-lucide="calendar-cog"></i>Pengaturan Jadwal</h3>
+        <div class="rule"><b>Ketentuan Reschedule:</b>Perubahan jadwal dapat dilakukan <u>bebas biaya</u> hingga maksimal 6 jam sebelum sesi berlangsung.</div>
+        <button class="side-btn" id="btnResched"><i data-lucide="refresh-cw"></i>Ubah Jadwal (Reschedule)</button>
+        <button class="side-btn danger" id="btnCancel"><i data-lucide="x-circle"></i>Batalkan Pertemuan</button>
+      </div>
+
+      <div class="card">
+        <h3><i data-lucide="life-buoy"></i>Bantuan Mendesak</h3>
+        <p style="font-size:10px;color:var(--muted);margin-bottom:12px">Mendapatkan penyesuaian mendesak atau mengalami kendala teknis? Hubungi kurator kami.</p>
+        <button class="side-btn wa" id="btnWa"><i data-lucide="message-square"></i>Hubungi Kurator via WhatsApp</button>
+        <div class="help-meta"><span>Respons Rata-rata: &lt; 10 Menit</span><span class="live">Live Online</span></div>
+      </div>
+
+      <div class="nav-card">
+        <div class="eyebrow">Arah Navigasi Proyek</div>
+        <button class="side-btn violet" data-toast="Konfirmasi Jadwal Berhasil!"><i data-lucide="layout-dashboard"></i>Konfirmasi Jadwal</button>
+        <button class="side-btn" style="margin:0" data-toast="Membuka semua jadwal..."><i data-lucide="calendar-range"></i>Lihat Semua Jadwal</button>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo"><span class="logo-mark"><i data-lucide="layers"></i></span>VISIORA</a>
+        <p>© 2024 VISIORA. Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#">Beranda</a></li><li><a href="#">Portofolio</a></li><li><a href="#">Layanan</a></li>
+          <li><a href="#">Tentang</a></li><li><a href="#">Kontak</a></li><li><a href="#">Masuk</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Socials</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li><li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Newsletter</h5>
+        <p style="margin:0;max-width:none">Subscribe to our periodic design insights.</p>
+        <div class="news-form">
+          <input type="email" id="newsEmail" placeholder="Enter your email">
+          <button id="btnJoin">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="l">Sistem Reservasi Terverifikasi • <a href="#">VISIORA Sync Hub</a></div>
+      <div class="r"><a href="#">Kebijakan Privasi</a><a href="#">Syarat &amp; Ketentuan Layanan</a><a href="#">Status Server</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- =====================================================
+     BAGIAN 3 : JAVASCRIPT (dipisah ke js/script.js)
+     ===================================================== -->
+<script src="p.konfirmasi.js"></script>
+
+</body>
+</html>

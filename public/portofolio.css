@@ -1,0 +1,402 @@
+/* =====================================================
+   VISIORA - Portofolio Pilihan
+   File: style.css
+   ===================================================== */
+
+/* ---------- Reset & Variabel ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050508;
+  --card: #101018;
+  --border: #1e1e2b;
+  --text: #ffffff;
+  --muted: #8b8fa3;
+  --accent: #7c3aed;
+  --accent-light: #a78bfa;
+  --subtitle: #7cc4f5;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(19, 19, 21, .85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s;
+}
+
+.navbar.scrolled {
+  border-color: var(--border);
+}
+
+.container {
+  width: min(1280px, 100%);
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.navbar .logo span {
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  font-size: 11px;
+  color: #d4d4da;
+  transition: color .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border: 0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform .2s, background .2s, box-shadow .2s;
+}
+
+.navbar .btn-sm {
+  padding: 9px 18px;
+}
+
+.navbar .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.navbar .btn-primary:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+
+.user-btn {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  background: #e4e4e8;
+  color: #333;
+  border-radius: 6px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  color: var(--text);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+
+/* ---------- Konten Utama ---------- */
+main {
+  flex: 1;
+  padding: 28px 20px 30px;
+}
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.header-row h1 {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.header-row p {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--subtitle);
+}
+
+/* ---------- Filter ---------- */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.filter-btn {
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #14141f;
+  color: #d6d6e0;
+  border: 1px solid #262636;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Grid Kartu ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 7px 7px 14px;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3b3b55;
+}
+
+.card-img {
+  height: 145px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.card-img.kopi {
+  letter-spacing: 1.5px;
+}
+
+.card-body {
+  padding: 0 3px;
+}
+
+.card-title {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-desc {
+  margin-top: 7px;
+  font-size: 9.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: 8px;
+  font-weight: 500;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #191926;
+  border: 1px solid #25253a;
+  color: #c4c4d6;
+}
+
+.card.hide {
+  display: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 46px;
+  border-top: 1px solid var(--border);
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-left .logo {
+  font-size: 11px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #d6d6e0;
+  font-size: 8px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-light);
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 1000px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #17171a;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+  }
+
+  .nav-links.open {
+    max-height: 340px;
+  }
+
+  .nav-links a {
+    padding: 14px 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .header-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 14px 20px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding-inline: 18px;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+}

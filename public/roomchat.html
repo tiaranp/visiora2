@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA - Konsultasi Proyek #VS-2024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="roomchat.css" />
+  <link rel="stylesheet" href="back-navigation.css" />
+  <script src="back-navigation.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand">
+        <svg class="brand-logo" viewBox="0 0 32 32" fill="none">
+          <path d="M5 7l11 18L27 7" stroke="url(#lg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11 7l5 8 5-8" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+          <defs><linearGradient id="lg" x1="5" y1="7" x2="27" y2="25"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+        </svg>
+        <span class="brand-name">VISIORA</span>
+      </div>
+      <span class="crumb-sep">›</span>
+      <span class="crumb">Konsultasi Proyek #VS-2024</span>
+    </div>
+
+    <div class="status-pill">
+      <span class="dot dot-cyan"></span>
+      Customer Support Online <span class="cyan">(Respon &lt; 2 mnt)</span>
+    </div>
+
+    <div class="topbar-right">
+      <button class="btn-meet" id="btnMeet">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg>
+        Mulai Google Meet
+      </button>
+      <button class="btn-icon" aria-label="Unduh">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+      </button>
+      <a href="profile.html" class="avatar avatar-sm av-1 with-dot" aria-label="Profil"><img src="images/Nathalia Pradipta.jpg" alt="Nathalia Pradipta" /><i class="dot dot-cyan"></i></a>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="layout">
+
+    <!-- ========== KOLOM KIRI ========== -->
+    <aside class="col col-left">
+      <div class="section-head">
+        <h4 class="section-title">RUANG TIKET &amp; SESI</h4>
+        <button class="link-btn" id="btnNewTicket">+ Tiket Baru</button>
+      </div>
+
+      <div class="ticket active" data-ticket="1">
+        <div class="ticket-top">
+          <span class="badge-active">AKTIF SEKARANG</span>
+          <span class="ticket-time">14:32</span>
+        </div>
+        <div class="ticket-title">Diskusi Proyek Baru - Redesign Web &...</div>
+        <div class="ticket-sub">Nathalia: Pilihan yang sangat tepat! Kami...</div>
+        <div class="ticket-foot"><span class="dot dot-cyan"></span> Prioritas Konsultasi VIP</div>
+      </div>
+
+      <div class="ticket" data-ticket="2">
+        <div class="ticket-top">
+          <span class="ticket-id">#TK-8912 • Selesai</span>
+          <span class="ticket-time">Kemarin</span>
+        </div>
+        <div class="ticket-title">Revisi Milestone 2</div>
+        <div class="ticket-sub">Approval desain prototype figma terkirim.</div>
+      </div>
+
+      <div class="ticket" data-ticket="3">
+        <div class="ticket-top">
+          <span class="ticket-id">#TK-7421 • Ditutup</span>
+          <span class="ticket-time">12 Okt</span>
+        </div>
+        <div class="ticket-title">Pertanyaan Billing &amp; Invoice</div>
+        <div class="ticket-sub">Kuitansi termin pembayaran diterima.</div>
+      </div>
+
+      <h4 class="section-title mt">KONSULTAN DEDICATED ANDA</h4>
+      <div class="card consultant">
+        <div class="avatar avatar-md av-1 with-dot"><img src="images/Nathalia Pradipta.jpg" alt="Nathalia Pradipta" /><i class="dot dot-cyan"></i></div>
+        <div>
+          <div class="consultant-name">Nathalia Pradipta</div>
+          <div class="muted xs">Senior Client Partner</div>
+          <div class="stars">★★★★★ <span class="muted xs">5.0 (48 review)</span></div>
+        </div>
+      </div>
+
+      <h4 class="section-title mt">DOKUMEN &amp; REFERENSI CEPAT</h4>
+      <ul class="doc-list">
+        <li class="doc-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 013 3v13a2 2 0 00-2-2H2zM22 4h-7a3 3 0 00-3 3v13a2 2 0 012-2h8z"/></svg>
+          <span>FAQ Layanan &amp; Deliverables</span><em>›</em>
+        </li>
+        <li class="doc-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>Dokumen Standard NDA</span><em>›</em>
+        </li>
+        <li class="doc-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <span>Sinkronisasi Jadwal Meeting</span><em>›</em>
+        </li>
+      </ul>
+
+      <div class="shield">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> VISIORA Client Shield v2.4</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+      </div>
+    </aside>
+
+    <!-- ========== KOLOM TENGAH (CHAT) ========== -->
+    <section class="col col-mid">
+      <div class="chat-head">
+        <div class="avatar avatar-md av-1 with-dot"><img src="images/Nathalia Pradipta.jpg" alt="Nathalia Pradipta" /><i class="dot dot-cyan"></i></div>
+        <div class="chat-head-info">
+          <div class="chat-name">Nathalia Pradipta <span class="role-badge">CREATIVE PARTNER</span></div>
+          <div class="muted xs">Aktif sekarang • Rata-rata respon 2 menit</div>
+        </div>
+        <div class="chat-head-actions">
+          <button class="ghost" aria-label="Cari"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+          <button class="ghost" id="btnStar" aria-label="Favorit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg></button>
+        </div>
+      </div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="day-pill"><span>Hari Ini, 14:30 WIB</span></div>
+
+        <div class="sys-msg">
+          <div class="sys-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <p>Selamat datang di Ruang Konsultasi VIP VISIORA. Diskusi ini dilindungi kerahasiaan NDA otomatis untuk menjamin integritas ide &amp; rencana bisnis Anda.</p>
+        </div>
+
+        <div class="msg">
+          <div class="avatar avatar-xs av-1"><img src="images/Nathalia Pradipta.jpg" alt="Nathalia Pradipta" /></div>
+          <div class="msg-col">
+            <div class="msg-meta"><b>Nathalia Pradipta</b> <span>14:30</span></div>
+            <div class="bubble">
+              Halo! Selamat datang di <b class="cyan">VISIORA</b>. Kami siap membantu mewujudkan proyek digital ambisius Anda, persis seperti visi Anda: <i class="violet">"Punya Visi Luar Biasa? Mari Wujudkan Bersama."</i>
+            </div>
+            <div class="bubble bubble-wide">
+              <p>Untuk memetakan kebutuhan tim teknis dan strategi kreatif kami, fokus utama apa yang ingin diprioritaskan dalam konsultasi ini?</p>
+              <div class="options" id="options">
+                <button class="option" data-value="UI/UX Design">
+                  <span class="opt-icon violet-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg></span>
+                  <strong>UI/UX Design</strong>
+                  <small>Web Portal, Design System</small>
+                </button>
+                <button class="option" data-value="Brand">
+                  <span class="opt-icon cyan-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg></span>
+                  <strong>Brand</strong>
+                  <small>Visual Identity, Guidelines</small>
+                </button>
+                <button class="option" data-value="Custom">
+                  <span class="opt-icon blue-bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M12 18h4"/></svg></span>
+                  <strong>Custom</strong>
+                  <small>WebGL, Next.js, Headless</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-foot">
+        <div class="quick">
+          <span class="quick-label">BALAS CEPAT:</span>
+          <button class="chip">Target Q1 2025</button>
+          <button class="chip">Flexibel sesuai kualitas...</button>
+        </div>
+        <form class="composer" id="composer">
+          <textarea id="msgInput" rows="2" placeholder="Ketik pesan atau pertanyaan untuk tim VISIORA..."></textarea>
+          <div class="composer-row">
+            <div class="composer-tools">
+              <button type="button" class="ghost" aria-label="Lampirkan"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></button>
+              <button type="button" class="ghost" id="btnEmoji" aria-label="Emoji"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></button>
+              <button type="button" class="ghost" aria-label="Mikrofon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v4"/></svg></button>
+            </div>
+            <button type="submit" class="btn-send">Kirim
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== KOLOM KANAN ========== -->
+    <aside class="col col-right">
+      <div class="section-head">
+        <h4 class="section-title">RINGKASAN PROYEK</h4>
+        <span class="badge-vip">VIP DISCOVERY</span>
+      </div>
+
+      <div class="card summary">
+        <div class="label">KLIEN / ENTITAS BISNIS</div>
+        <div class="value strong">Nexus Global Technologies</div>
+        <div class="label">STATUS PROYEK</div>
+        <div class="value"><span class="dot dot-yellow"></span> Tahap Penjajakan / Discovery</div>
+        <div class="label">ESTIMASI TIMELINE</div>
+        <div class="value">8 - 12 Minggu Kalender</div>
+      </div>
+
+      <h4 class="section-title mt">PAKET LAYANAN TERKAIT</h4>
+      <div class="card package">
+        <div class="package-head">
+          <span class="opt-icon violet-bg sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg></span>
+          <b>Custom Creative Execution</b>
+        </div>
+        <ul class="checks">
+          <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Arsitektur UI/UX Enterprise Tingkat Lanjut</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Sistem Komponen Desain Token Terpadu</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Dukungan Konsultan &amp; Code Hand-off</li>
+        </ul>
+      </div>
+
+      <h4 class="section-title mt">DEDICATED TEAM</h4>
+      <div class="team">
+        <div class="card member">
+          <div class="avatar avatar-sm av-1"><span>NP</span></div>
+          <div><div class="m-name">Nathalia P.</div><div class="muted xs">Lead Consultant</div></div>
+          <i class="dot dot-cyan big"></i>
+        </div>
+        <div class="card member">
+          <div class="avatar avatar-sm av-2"><span>AM</span></div>
+          <div><div class="m-name">Arka Maulana</div><div class="muted xs">Tech Architect</div></div>
+          <i class="dot dot-cyan big"></i>
+        </div>
+        <div class="card member">
+          <div class="avatar avatar-sm av-3"><span>KW</span></div>
+          <div><div class="m-name">Kevin Wardhana</div><div class="muted xs">Design Director</div></div>
+          <i class="dot dot-grey big"></i>
+        </div>
+      </div>
+
+      <div class="card sow">
+        <h5>Puas dengan diskusi?</h5>
+        <p>Lanjutkan ke tahapan penyusunan Statement of Work (SOW) &amp; estimasi budget definitif.</p>
+        <button class="btn-sow" id="btnSow">Lanjutkan ke SOW Resmi
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="room.chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+/* =========================================================
+   1. RESET & VARIABEL WARNA
+   ========================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0b0b0f;
+  --card: #13131a;
+  --card-2: #181821;
+  --border: #25252f;
+  --text: #f2f2f6;
+  --muted: #8b8b9a;
+  --muted-2: #6d6d7c;
+  --purple: #a78bfa;
+  --purple-dark: #6d4bd8;
+  --blue: #60a5fa;
+  --green: #34d399;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-alt: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+svg { width: 1em; height: 1em; flex-shrink: 0; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+
+/* =========================================================
+   2. LAYOUT UTAMA
+   ========================================================= */
+.profile-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 11, 15, .92);
+  backdrop-filter: blur(14px);
+}
+.profile-navbar__inner {
+  width: min(1240px, 100%);
+  min-height: 64px;
+  margin: 0 auto;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.profile-navbar__brand {
+  font-family: var(--font-alt);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+.profile-navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.profile-navbar__links a:hover,
+.profile-navbar__links a:focus-visible {
+  color: var(--text);
+}
+.page { max-width: 1240px; margin: 0 auto; padding: 0 14px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 263px;
+  gap: 22px;
+  margin-top: 22px;
+  align-items: start;
+}
+.col { display: flex; flex-direction: column; gap: 22px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 22px;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.card-title-wrap { display: flex; gap: 12px; align-items: center; }
+.icon-box {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: var(--card-2); border: 1px solid var(--border);
+  display: grid; place-items: center; font-size: 17px; color: var(--muted);
+}
+.card-title { font-size: 17px; font-weight: 500; }
+.card-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.link-action { font-size: 11.5px; color: var(--blue); font-weight: 500; display: flex; align-items: center; gap: 5px; }
+
+/* =========================================================
+   3. HEADER PROFIL
+   ========================================================= */
+.profile-header {
+  margin-top: 0;
+  background: linear-gradient(90deg, #14141b 60%, #1b1b25 100%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 22px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.avatar-wrap { position: relative; }
+.avatar {
+  width: 68px; height: 68px; border-radius: 16px;
+  border: 2px solid #5b4aa8;
+  background: linear-gradient(135deg, #3b2f66, #1c1a2e);
+  overflow: hidden;
+  display: grid; place-items: center;
+  font-size: 26px; font-weight: 600; color: var(--purple);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.verified {
+  position: absolute; right: -6px; bottom: -6px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--purple-dark); border: 2px solid var(--bg);
+  display: grid; place-items: center; font-size: 11px; color: #fff;
+}
+.profile-name-row { display: flex; align-items: center; gap: 12px; }
+.profile-name { font-size: 18px; font-weight: 600; }
+.badge-exclusive {
+  background: #23223a; border: 1px solid #38366a; color: #c9c6ee;
+  font-size: 10.5px; padding: 3px 10px; border-radius: 999px;
+  display: flex; align-items: center; gap: 6px;
+}
+.badge-exclusive::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--purple); }
+.profile-role { color: #b9b9c6; font-size: 13.5px; margin-top: 4px; }
+.profile-role a { color: var(--blue); margin-left: 6px; }
+.profile-meta { display: flex; gap: 16px; margin-top: 10px; font-size: 11px; color: var(--muted); }
+.profile-meta span { display: flex; align-items: center; gap: 5px; }
+
+/* =========================================================
+   4. DATA KLIEN & ENTITAS BISNIS
+   ========================================================= */
+.data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 28px; }
+.data-label { font-size: 9.5px; letter-spacing: .06em; color: var(--muted-2); text-transform: uppercase; margin-bottom: 6px; }
+.data-value { font-size: 13.5px; font-weight: 500; }
+
+/* =========================================================
+   5. PROYEK SEDANG BERJALAN
+   ========================================================= */
+.project {
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  margin-bottom: 14px;
+}
+.project:last-child { margin-bottom: 0; }
+.project-top { display: flex; justify-content: space-between; align-items: center; }
+.project-title { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; }
+.tag {
+  font-size: 10px; font-weight: 500; padding: 2px 9px; border-radius: 6px;
+  background: #2a2840; color: #b9b3ee; border: 1px solid #3a3763;
+}
+.tag.blue { background: #1c2a40; color: #8fc1f7; border-color: #2c4568; }
+.tag.green { background: #123428; color: #5fe0b0; border-color: #1f5b45; }
+.project-percent { font-size: 12px; font-weight: 600; }
+.project-desc { font-size: 12px; color: #a6a6b4; margin-top: 4px; }
+.progress { height: 6px; border-radius: 999px; background: #2a2a35; margin: 12px 0 12px; overflow: hidden; }
+.progress-bar { height: 100%; border-radius: 999px; }
+.bar-purple { background: linear-gradient(90deg, #60a5fa, #b18cf7, #e08bd0); }
+.bar-blue { background: linear-gradient(90deg, #60a5fa, #8f9cf7); }
+.bar-green { background: linear-gradient(90deg, #34d399, #3de0a8); }
+.project-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: var(--muted); }
+.project-bottom span { display: flex; align-items: center; gap: 5px; }
+.project-bottom a { color: var(--blue); font-weight: 500; display: flex; align-items: center; gap: 5px; }
+.project-bottom a.green { color: var(--green); }
+
+/* =========================================================
+   6. TIM KURATOR & AHLI PENDAMPING
+   ========================================================= */
+.team-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.member {
+  background: var(--card-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 12px;
+}
+.member-avatar {
+  width: 38px; height: 38px; border-radius: 9px; overflow: hidden;
+  background: linear-gradient(135deg, #2f3a5c, #1b1f33);
+  display: grid; place-items: center; font-weight: 600; font-size: 13px; color: var(--blue);
+}
+.member-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.member-info { flex: 1; }
+.member-name { font-size: 12.5px; font-weight: 600; }
+.member-role { font-size: 10.5px; font-weight: 500; color: var(--purple); margin-top: 1px; }
+.member-role.cyan { color: #5ecbe8; }
+.member-note { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.team-empty { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 12px; }
+.team-empty a { color: var(--blue); }
+.chat-btn {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: var(--card); border: 1px solid var(--border);
+  color: var(--text); display: grid; place-items: center; font-size: 14px; text-decoration: none;
+}
+.badge-team {
+  font-size: 10.5px; padding: 4px 11px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--card-2); color: #c0c0cc;
+}
+
+/* =========================================================
+   7. SIDEBAR - STATISTIK KERJASAMA
+   ========================================================= */
+.side-title { display: flex; align-items: center; gap: 8px; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; margin-bottom: 14px; }
+.side-title svg { color: var(--blue); }
+.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.stat-box { background: var(--card-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px 12px; }
+.stat-label { font-size: 9px; letter-spacing: .05em; color: var(--muted-2); text-transform: uppercase; }
+.stat-number { font-size: 24px; font-weight: 600; margin: 4px 0 2px; font-family: var(--font-alt); }
+.stat-number.purple { color: #c4b2fb; }
+.stat-number.blue { color: var(--blue); }
+.stat-number.green { color: var(--green); }
+.stat-note { font-size: 10.5px; color: var(--muted); }
+.stat-wide { display: flex; justify-content: space-between; align-items: center; }
+.gauge {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: #123428; border: 1px solid #1f5b45; color: var(--green);
+  display: grid; place-items: center; font-size: 17px;
+}
+
+/* =========================================================
+   8. SIDEBAR - SESI & KEAMANAN AKUN
+   ========================================================= */
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.sec-head .side-title { margin-bottom: 0; }
+.badge-2fa {
+  font-size: 9.5px; padding: 2px 9px; border-radius: 6px;
+  background: #123428; color: var(--green); border: 1px solid #1f5b45;
+}
+.session-box { background: var(--card-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; gap: 10px; }
+.session-box > svg { font-size: 17px; color: var(--muted); margin-top: 2px; }
+.session-name { font-size: 12px; font-weight: 600; }
+.session-loc { font-size: 10.5px; color: var(--muted); margin-top: 2px; }
+.session-ip { font-size: 10.5px; color: var(--blue); font-weight: 600; margin-top: 4px; }
+.twofa-row { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: #b9b9c6; margin: 14px 0 12px; }
+.twofa-row span { display: flex; align-items: center; gap: 5px; color: var(--text); }
+.btn-outline {
+  width: 100%; padding: 10px; border-radius: 9px;
+  background: var(--card-2); border: 1px solid var(--border);
+  color: var(--text); font-size: 11px; font-weight: 500;
+}
+.btn-outline:hover { background: #1f1f2a; }
+
+/* =========================================================
+   9. SIDEBAR - PENYIMPANAN CLOUD
+   ========================================================= */
+.storage-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.storage-head .side-title { margin-bottom: 0; }
+.storage-head .side-title svg { color: var(--muted); }
+.tier { font-size: 10px; color: var(--muted); }
+.storage-row { display: flex; justify-content: space-between; font-size: 11.5px; margin-bottom: 8px; }
+.storage-row b { font-weight: 500; }
+.storage-row .pct { color: var(--purple); font-weight: 600; }
+.storage-bar { height: 5px; border-radius: 999px; background: #2a2a35; overflow: hidden; }
+.storage-fill { width: 28.4%; height: 100%; background: linear-gradient(90deg, #b9a4f8, #7d63e8); border-radius: 999px; }
+.storage-desc { font-size: 10.5px; color: var(--muted); margin: 10px 0 14px; line-height: 1.5; }
+.file {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--card-2); border: 1px solid var(--border);
+  border-radius: 9px; padding: 9px 11px; font-size: 10.5px; margin-bottom: 8px;
+}
+.file span { display: flex; align-items: center; gap: 8px; }
+.file svg { color: var(--muted); }
+.file .dl { cursor: pointer; }
+.btn-upload { margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 7px; }
+
+/* =========================================================
+   10. SIDEBAR - DEDICATED CONCIERGE
+   ========================================================= */
+.concierge {
+  background: linear-gradient(145deg, #3b2f66 0%, #2a2547 60%, #26223f 100%);
+  border: 1px solid #4a3f82;
+  border-radius: 18px;
+  padding: 20px 18px;
+}
+.concierge-icon {
+  width: 40px; height: 40px; border-radius: 11px;
+  background: #5b3fc4; display: grid; place-items: center; font-size: 20px; color: #fff;
+}
+.concierge h3 { font-size: 16px; font-weight: 500; margin: 12px 0 6px; }
+.concierge p { font-size: 11.5px; color: #c4c0dd; line-height: 1.5; margin-bottom: 14px; }
+.btn-light {
+  width: 100%; padding: 10px; border: none; border-radius: 9px;
+  background: #e6e6ec; color: #16161d; font-weight: 600; font-size: 12px;
+}
+.btn-light:hover { background: #fff; }
+
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
+footer {
+  margin-top: 28px;
+  border-top: 1px solid var(--border);
+  padding: 26px 0 30px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; color: var(--muted);
+}
+.footer-left { display: flex; align-items: center; gap: 14px; }
+.logo { font-family: var(--font-alt); font-size: 16px; font-weight: 600; letter-spacing: .06em; color: var(--text); }
+.dot { width: 4px; height: 4px; background: var(--muted); border-radius: 50%; }
+.footer-links { display: flex; gap: 22px; font-size: 10px; color: #b0b0be; }
+.footer-links a:hover { color: #fff; }
+
+/* =========================================================
+   12. RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .data-grid, .team-wrap { grid-template-columns: 1fr; }
+  .profile-header { flex-direction: column; align-items: flex-start; }
+  .profile-meta { flex-wrap: wrap; }
+  footer { flex-direction: column; gap: 16px; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .profile-navbar__inner { gap: 14px; }
+  .profile-navbar__links {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- =====================================================
+     VISIORA - Portofolio Pilihan
+     File: index.html  (terhubung ke style.css & script.js)
+     ===================================================== -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA - Portofolio Pilihan (Galeri Lengkap)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="portofolio.css" />
+  <link rel="stylesheet" href="back-navigation.css" />
+  <script src="back-navigation.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="beranda.html#beranda" class="logo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 4l9 16 9-16h-5l-4 7-4-7H3z" fill="url(#lg)"/>
+          <defs><linearGradient id="lg" x1="3" y1="4" x2="21" y2="20"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+        </svg>
+        <span>VISIORA</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="beranda.html#beranda">Beranda</a>
+        <a href="portofolio.html#portfolio-grid" class="active">Portfolio</a>
+        <a href="layanan.html#layanan">Layanan</a>
+        <a href="tim%20ahli.html#tim-ahli">Tim Ahli</a>
+        <a href="tentang.html#tentang">Tentang</a>
+        <a href="beranda.html#kontak">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="profile.html" class="user-btn" aria-label="Profil">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6z"/></svg>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Konten -->
+  <main>
+    <div class="header-row">
+      <div>
+        <h1>Portofolio Pilihan</h1>
+        <p>Karya terbaru untuk klien dari berbagai industri.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+    </div>
+
+    <!-- Kartu dibuat otomatis oleh script.js -->
+    <section class="grid" id="portfolio-grid"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <a href="#" class="logo">VISIORA<span> .</span></a>
+      <span>© 2024 VISIORA Creative Digital Studio. Hak Cipta Dilindungi.</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privasi</a>
+      <a href="#">Syarat &amp; Ketentuan</a>
+      <a href="#">Dribbble</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="portofollio.js"></script>
+  <script src="portofolio-nav.js"></script>
+</body>
+</html>

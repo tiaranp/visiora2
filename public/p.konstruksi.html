@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     VISIORA - Portofolio: Konstruksi Prima
+     STRUKTUR FILE:
+       1. index.html            -> BAGIAN HTML (file ini)
+       2. css/style.css         -> BAGIAN CSS
+       3. js/script.js          -> BAGIAN JS
+     ===================================================================== -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISIORA - Portofolio: Konstruksi Prima</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===================== BAGIAN CSS ===================== -->
+  <link rel="stylesheet" href="p.konstruksi.css" />
+  <link rel="stylesheet" href="back-navigation.css" />
+  <script src="back-navigation.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ===================== BAGIAN HTML ===================== -->
+
+  <!-- SVG ICON SPRITE -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V7a4 4 0 018 0v4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M5 19c3-5 6-8 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-hardhat" viewBox="0 0 24 24"><path d="M3 18h18M5 18v-3a7 7 0 0114 0v3M12 8V5M9 9l1-3h4l1 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z M3 13l9 5 9-5 M3 17.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1116 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 14l4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 01-.5-8A6 6 0 0118 9.5 4.3 4.3 0 0117.5 18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V14l8-2-8-2z" fill="currentColor"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 10-3-3M3 12h16a3 3 0 11-3 3M3 16h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-braces" viewBox="0 0 24 24"><path d="M9 4C6 4 6 6 6 8s0 4-3 4c3 0 3 2 3 4s0 4 3 4M15 4c3 0 3 2 3 4s0 4 3 4c-3 0-3 2-3 4s0 4-3 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M14 4c3 0 6 1 6 1s1 3 1 6c-2 3-5 5-8 6l-5-5c1-3 3-6 6-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="14.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M8 14l-4 1 2 3M10 16l-1 4 3-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></symbol>
+      <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="logo"><span class="logo__dot"></span>VISIORA</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#">Beranda</a>
+        <a href="#">Kontak</a>
+        <a href="#" class="active">Portofolio</a>
+        <a href="#">Layanan</a>
+        <a href="#">Tim Ahli</a>
+        <a href="#">Tentang</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="profile.html" class="icon-circle" aria-label="Profil"><svg class="ico"><use href="#i-user"/></svg></a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__top">
+        <a href="portofolio.html#portfolio-grid" class="back-link"><svg class="ico ico--sm"><use href="#i-arrow-left"/></svg> Kembali ke Galeri Portofolio</a>
+        <span class="pill-badge"><i class="dot dot--cyan"></i> INDUSTRIAL &amp; B2B ENGINEERING • 2024</span>
+      </div>
+
+      <div class="hero__grid">
+        <div class="hero__text">
+          <span class="tag-violet">STUDI KASUS TRANSFORMASI DIGITAL</span>
+          <h1>Konstruksi Prima — Modernisasi Profil Perusahaan Konglomerat Infrastruktur &amp; Rekayasa Sipil</h1>
+          <p>Rekonstruksi arsitektur digital dan platform company profile enterprise untuk PT Konstruksi Prima Perkasa Tbk, menghadirkan showcase mega-proyek interaktif, visualisasi data alat berat, serta portal tender digital yang aman.</p>
+          <div class="hero__buttons">
+            <a href="#showcase" class="btn btn--primary" id="btnExplore">Eksplorasi Platform <svg class="ico ico--sm"><use href="#i-arrow-down"/></svg></a>
+            <a href="#rfq" class="btn btn--dark"><svg class="ico ico--sm"><use href="#i-lock"/></svg> Portal Tender &amp; RFQ</a>
+          </div>
+        </div>
+
+        <aside class="meta-card">
+          <div class="meta-card__head"><span>METADATA PROYEK</span><i class="dot dot--cyan"></i></div>
+          <div class="meta-item"><small>KLIEN/INSTANSI</small><strong>PT Konstruksi Prima Perkasa Tbk</strong></div>
+          <div class="meta-item"><small>SEKTOR BISNIS</small><strong>EPC &amp; Infrastruktur Nasional</strong></div>
+          <div class="meta-item"><small>DURASI PENGEMBANGAN</small><strong>10 Minggu Rekayasa Digital</strong></div>
+          <div class="meta-item"><small>RUANG LINGKUP PEKERJAAN</small>
+            <div class="chips">
+              <span class="chip">Corporate Website</span>
+              <span class="chip">Tender Portal</span>
+              <span class="chip">Interactive Project Map</span>
+              <span class="chip">CMS Multi-Cabang</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/konstruksi-4.jpg" alt="Jembatan kabel dan simpang susun malam hari" onerror="this.style.display='none'" />
+        <div class="hero-image__shade"></div>
+        <div class="hero-image__caption">
+          <div>
+            <small><svg class="ico ico--xs"><use href="#i-layers"/></svg> LIVE ARCHITECTURE INTERFACE</small>
+            <strong>Sistem Repositori Portofolio 4K &amp; Hub Penawaran Terpadu</strong>
+          </div>
+          <div class="hero-image__right">
+            <span>Resolusi UHD/HDR Aktif</span>
+            <span class="tag-violet tag-violet--solid">Enterprise Portal v2.4</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SHOWCASE FITUR ===== -->
+    <section class="showcase" id="showcase">
+      <small class="eyebrow eyebrow--cyan">ARSITEKTUR FITUR &amp; INOVASI</small>
+      <h2 class="h2">Showcase Visual Portofolio &amp; Fitur Enterprise</h2>
+      <p class="lead">Dirancang dengan presisi untuk memenuhi kepatuhan tata kelola B2B, transparansi kemitraan konsorsium, dan kemudahan evaluasi tender.</p>
+
+      <div class="grid-top">
+        <!-- Galeri -->
+        <article class="card">
+          <div class="card__head">
+            <div class="card__title">
+              <span class="icon-box icon-box--violet"><svg class="ico"><use href="#i-image"/></svg></span>
+              <div><h3>Galeri Interaktif Mega Proyek</h3><p>Filter multi-sektor: Pra-Konstruksi, Pengerjaan, Operasional</p></div>
+            </div>
+            <span class="status-badge">Real-Time Sync</span>
+          </div>
+          <div class="gallery">
+            <figure class="gallery__item">
+              <img src="images/konstruksi-2.jpg" alt="Bendungan" onerror="this.style.display='none'" />
+              <figcaption><strong>Bendungan Way Sepuluh • Paket 6</strong><span>Kapasitas 120 Juta m³ | Status: Selesai</span></figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img src="images/konstruksi-3.jpg" alt="Pelabuhan" onerror="this.style.display='none'" />
+              <figcaption><strong>Pelabuhan Peti Kemas Terpadu</strong><span>Dermaga 800 | Phase: Operasional</span></figcaption>
+            </figure>
+          </div>
+          <div class="card__foot">
+            <div class="chips chips--inline"><span class="muted">Tipe Infrastruktur Terpopuler:</span><span class="chip">Jembatan</span><span class="chip">Jalan Tol</span><span class="chip">Irigasi</span></div>
+            <a href="#" class="link-cyan">Lihat 48 Proyek ›</a>
+          </div>
+        </article>
+
+        <!-- RFQ -->
+        <article class="card" id="rfq">
+          <div class="card__head">
+            <div class="card__title">
+              <span class="icon-box icon-box--cyan"><svg class="ico"><use href="#i-file"/></svg></span>
+              <div><h3>Portal Penawaran &amp; RFQ</h3><p>Kalkulator Biaya Konstruksi Cepat</p></div>
+            </div>
+          </div>
+          <form class="rfq" id="rfqForm">
+            <label>Klasifikasi Proyek
+              <div class="select-wrap">
+                <select id="rfqType">
+                  <option>Infrastruktur Jalan Bebas Hambatan</option>
+                  <option>Jembatan &amp; Terowongan</option>
+                  <option>Bendungan &amp; Irigasi</option>
+                  <option>Pelabuhan &amp; Bandara</option>
+                  <option>Gedung &amp; Properti Komersial</option>
+                </select>
+                <svg class="ico ico--sm"><use href="#i-chev"/></svg>
+              </div>
+            </label>
+            <label>Nilai Pagu Anggaran (IDR)
+              <div class="select-wrap">
+                <select id="rfqBudget">
+                  <option>Rp 150.000.000.000 - 500M+</option>
+                  <option>Rp 500.000.000.000 - 1T</option>
+                  <option>Rp 1T - 5T+</option>
+                </select>
+                <svg class="ico ico--sm"><use href="#i-chev"/></svg>
+              </div>
+            </label>
+            <label>Unggah Kerangka Acuan Kerja (TOR/KAK)
+              <div class="dropzone" id="dropzone">
+                <svg class="ico"><use href="#i-cloud"/></svg>
+                <span id="dropText">Tarik berkas PDF tender ke sini</span>
+                <input type="file" id="fileInput" accept=".pdf" hidden />
+              </div>
+            </label>
+            <button type="submit" class="btn btn--cyan btn--block"><svg class="ico ico--sm"><use href="#i-send"/></svg> Kirimkan Permohonan Tender</button>
+          </form>
+        </article>
+      </div>
+
+      <div class="grid-bottom">
+        <!-- K3 -->
+        <article class="card">
+          <div class="card__head">
+            <div class="card__title">
+              <span class="icon-box icon-box--orange"><svg class="ico"><use href="#i-hardhat"/></svg></span>
+              <div><h3>K3 &amp; ESG Compliance Tracker</h3><p>Kepatuhan Standar Mutu Internasional</p></div>
+            </div>
+          </div>
+          <div class="compliance">
+            <div class="comp-row">
+              <div class="comp-row__top"><span><svg class="ico ico--sm c-orange"><use href="#i-shield"/></svg> ISO 45001:2018 (Sistem K3)</span><b class="c-orange">100% Audit Lulus</b></div>
+              <div class="bar"><i class="bar__fill bar__fill--orange" data-width="100"></i></div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-row__top"><span><svg class="ico ico--sm c-cyan"><use href="#i-leaf"/></svg> ISO 14001:2015 (Kelola Lingkungan ESG)</span><b class="c-cyan">Grade A+ (BUMN Index)</b></div>
+              <div class="bar"><i class="bar__fill bar__fill--cyan" data-width="92"></i></div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-row__top"><span><svg class="ico ico--sm c-violet"><use href="#i-shield"/></svg> Zero Fatality Record</span><b class="c-lilac">4.200.000 Jam Kerja</b></div>
+              <div class="bar"><i class="bar__fill bar__fill--violet" data-width="96"></i></div>
+            </div>
+          </div>
+          <div class="card__foot card__foot--center">
+            <span class="muted">Disertifikasi oleh BSI Group &amp; Sucofindo</span>
+            <svg class="ico ico--sm c-orange"><use href="#i-shield"/></svg>
+          </div>
+        </article>
+
+        <!-- Peta -->
+        <article class="card">
+          <div class="card__head">
+            <div class="card__title">
+              <span class="icon-box icon-box--violet"><svg class="ico"><use href="#i-pin"/></svg></span>
+              <div><h3>Peta Sebaran Proyek &amp; Telemetri Armada</h3><p>Pemantauan 240+ Unit Alat Berat Melalui IoT GPS</p></div>
+            </div>
+            <span class="status-badge">Live Telemetry</span>
+          </div>
+
+          <div class="map" id="map">
+            <img class="map__image" src="images/konstruksi-1.jpg" alt="Peta sebaran proyek dan telemetri armada" />
+          </div>
+
+          <div class="stats-3">
+            <div class="stat"><small>Total Proyek Aktif</small><strong><span class="count" data-target="34">34</span> Wilayah</strong></div>
+            <div class="stat"><small>Excavator &amp; Crane</small><strong class="c-cyan"><span class="count" data-target="246">246</span> Unit Terhubung</strong></div>
+            <div class="stat"><small>Kecepatan Armada</small><strong class="c-orange"><span class="count" data-target="98.4" data-decimal="1">98.4</span>% Siap Kerja</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 3 PILAR ===== -->
+    <section class="pillars">
+      <small class="eyebrow eyebrow--violet center">NILAI STRATEGIS REKAYASA DIGITAL</small>
+      <h2 class="h2 center">3 Pilar Transformasi Digital B2B Konstruksi Prima</h2>
+      <p class="lead center">Mengubah cara konglomerat konstruksi mempresentasikan kapabilitas teknis dan menjalin kemitraan bernilai triliunan rupiah.</p>
+
+      <div class="pillars__grid">
+        <article class="pillar">
+          <span class="icon-box icon-box--violet"><svg class="ico"><use href="#i-building"/></svg></span>
+          <h3>Reputasi Korporat Skala Enterprise</h3>
+          <p>Meningkatkan kredibilitas institusi di mata kementerian, investor institusional, dan mitra internasional melalui representasi visual mutakhir berkepribadian kokoh.</p>
+          <span class="pillar__link c-lilac">Standar Keterbukaan IDX <svg class="ico ico--xs"><use href="#i-check"/></svg></span>
+        </article>
+        <article class="pillar">
+          <span class="icon-box icon-box--cyan"><svg class="ico"><use href="#i-gauge"/></svg></span>
+          <h3>Kecepatan Respons Penawaran Tender B2B</h3>
+          <p>Otomatisasi intake dokumen kualifikasi pengadaan dan RFQ yang mengeliminasi friksi birokrasi penawaran lintas divisi hingga 65% lebih singkat.</p>
+          <span class="pillar__link c-cyan">Alur Disposisi Kilat <svg class="ico ico--xs"><use href="#i-check"/></svg></span>
+        </article>
+        <article class="pillar">
+          <span class="icon-box icon-box--orange"><svg class="ico"><use href="#i-shield"/></svg></span>
+          <h3>Kinerja Web Berstandar Global Grade-A</h3>
+          <p>Eksekusi sistem Next.js headless berkecepatan sub-detik dengan enkripsi level perbankan untuk proteksi data tender bernilai strategis tinggi.</p>
+          <span class="pillar__link c-orange">SLA 99.98% Bergaransi <svg class="ico ico--xs"><use href="#i-check"/></svg></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== METRIK ===== -->
+    <section class="metrics">
+      <div class="metrics__text">
+        <small class="eyebrow eyebrow--cyan">DAMPAK KONKRET SOLUSI</small>
+        <h2>Metrik Kuantitatif &amp; Dampak Bisnis</h2>
+        <p>Hasil audit performa triwulan pertama pasca peluncuran resmi portal infrastruktur terpadu.</p>
+      </div>
+      <div class="metrics__cards">
+        <div class="metric"><strong class="grad-lilac">Rp 1.4T+</strong><b>Nilai Tender Diproses</b><p>Akumulasi estimasi nilai proyek yang masuk melalui modul RFQ portal.</p></div>
+        <div class="metric"><strong class="grad-cyan">-65%</strong><b>Waktu Tunggu Prospek</b><p>Efisiensi pengajuan pertama hingga penyerahan proposal teknis konsorsium.</p></div>
+        <div class="metric"><strong class="grad-orange">99.98%</strong><b>Uptime Infrastruktur</b><p>Keandalan jaringan server enterprise grade tanpa maintenance downtime tender.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== TEKNOLOGI ===== -->
+    <section class="tech">
+      <div class="tech__label"><small>TEKNOLOGI &amp; KEAMANAN FONDASI</small><strong>Arsitektur Perangkat Lunak Mutakhir</strong></div>
+      <div class="tech__chips">
+        <span class="tech-chip"><svg class="ico ico--sm c-lilac"><use href="#i-code"/></svg> Next.js 14 App Router</span>
+        <span class="tech-chip"><svg class="ico ico--sm c-cyan"><use href="#i-wind"/></svg> Tailwind CSS</span>
+        <span class="tech-chip"><svg class="ico ico--sm c-violet"><use href="#i-braces"/></svg> TypeScript Strict</span>
+        <span class="tech-chip"><svg class="ico ico--sm c-orange"><use href="#i-db"/></svg> Headless CMS Multi-Tenant</span>
+        <span class="tech-chip"><svg class="ico ico--sm c-cyan"><use href="#i-shield"/></svg> Cloudflare Enterprise WAF</span>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONI ===== -->
+    <section class="testi">
+      <div class="testi__stars">
+        <span><svg class="ico ico--xs"><use href="#i-star"/></svg><svg class="ico ico--xs"><use href="#i-star"/></svg><svg class="ico ico--xs"><use href="#i-star"/></svg><svg class="ico ico--xs"><use href="#i-star"/></svg><svg class="ico ico--xs"><use href="#i-star"/></svg></span>
+        <small>Kepuasan Klien 5.0</small>
+      </div>
+      <span class="testi__mark">99</span>
+      <blockquote>“VISIORA berhasil mengemas kompleksitas operasi sipil kami yang luas menjadi pengalaman digital yang sangat berwibawa, jernih, dan aman. Kehadiran portal baru ini secara langsung mengangkat reputasi kami dalam proses kualifikasi tender infrastruktur strategis nasional.”</blockquote>
+      <div class="testi__author">
+        <span class="icon-circle icon-circle--lg"><svg class="ico"><use href="#i-user"/></svg></span>
+        <div><strong>Ir. Bambang Suryonegoro, M.Eng</strong><small>Direktur Strategi Korporat &amp; Pemasaran — PT Konstruksi Prima Perkasa Tbk</small></div>
+      </div>
+    </section>
+
+    <!-- ===== PREV / NEXT ===== -->
+    <section class="pager">
+      <a href="#" class="pager__item">
+        <div><small><svg class="ico ico--xs"><use href="#i-arrow-left"/></svg> Proyek Sebelumnya</small><strong>Tenun Studio Identity</strong><span>Luxury Fashion Branding &amp; E-Commerce</span></div>
+        <svg class="ico ico--sm"><use href="#i-arrow-ur"/></svg>
+      </a>
+      <a href="#" class="pager__item pager__item--next">
+        <svg class="ico ico--sm"><use href="#i-arrow-ur"/></svg>
+        <div><small>Proyek Berikutnya <svg class="ico ico--xs"><use href="#i-arrow-right"/></svg></small><strong>Aurora Finance App</strong><span>Fintech Wealth Management Platform</span></div>
+      </a>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta" id="cta">
+      <span class="tag-violet">• Siap Membuka Ruang Pertumbuhan Baru</span>
+      <h2>Siap Mentransformasi Profil Bisnis Enterprise &amp; B2B Anda?</h2>
+      <p>Kolaborasikan visi industri Anda dengan eksekusi desain arsitektural dan teknologi kelas wahid bersama tim konsultan VISIORA.</p>
+      <div class="cta__buttons">
+        <a href="tim%20ahli.html#tim-ahli" class="btn btn--primary"><svg class="ico ico--sm"><use href="#i-rocket"/></svg> Mulai Proyek</a>
+        <a href="jadwal.html" class="btn btn--dark"><svg class="ico ico--sm"><use href="#i-calendar"/></svg> Jadwalkan Konsultasi</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <a href="#" class="logo logo--sm"><span class="logo__dot"></span>VISIORA</a>
+          <p>© 2024 VISIORA. Elite creative design agency operating at the intersection of digital innovation and high-end aesthetic execution.</p>
+        </div>
+        <nav class="footer__links">
+          <a href="#">Beranda</a><a href="#" class="active">Portofolio</a><a href="#">Layanan</a><a href="#">Tentang</a><a href="#">Kontak</a><a href="#">Masuk</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span>Hak Cipta Dilindungi Undang-Undang. Terdaftar di Kemenkominfo RI.</span>
+        <div><a href="#">Kebijakan Privasi</a><a href="#">Syarat &amp; Ketentuan</a><a href="#">Keamanan Siber</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- ===================== BAGIAN JAVASCRIPT ===================== -->
+  <script src="p.konstruksi.js"></script>
+</body>
+</html>
+

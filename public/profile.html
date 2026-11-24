@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISIORA - Portal Klien</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="back-navigation.css">
+</head>
+
+<body>
+<header class="profile-navbar">
+  <div class="profile-navbar__inner">
+    <a href="beranda.html#beranda" class="profile-navbar__brand">VISIORA</a>
+    <nav class="profile-navbar__links" aria-label="Navigasi utama">
+      <a href="beranda.html#beranda">Beranda</a>
+      <a href="portofolio.html">Portfolio</a>
+      <a href="layanan.html#layanan">Layanan</a>
+      <a href="tim%20ahli.html#tim-ahli">Tim Ahli</a>
+      <a href="tentang.html#tentang">Tentang</a>
+      <a href="beranda.html#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<a id="visiora-back-button" href="beranda.html#beranda" aria-label="Kembali ke Beranda">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  Kembali ke Beranda
+</a>
+
+<div class="page">
+
+  <!-- =====================================================
+       BAGIAN 1: HEADER PROFIL KLIEN
+       ===================================================== -->
+  <header class="profile-header" style="margin-top:0">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <!-- Ganti dengan foto: <img src="foto-alexander.jpg" alt="Alexander Pratama"> -->
+        <span id="profileInitials">...</span>
+      </div>
+      <div class="verified">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+    </div>
+    <div>
+      <div class="profile-name-row">
+        <h1 class="profile-name" id="profileName">Memuat profil...</h1>
+        <span class="badge-exclusive">Klien Eksklusif VISIORA</span>
+      </div>
+      <div class="profile-role">
+        <span id="profileEmail">Memuat email...</span>
+        &nbsp;•&nbsp;
+        <span id="profilePhone">Memuat nomor telepon...</span>
+      </div>
+      <div class="profile-meta">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Tingkat: VIP Platinum Partner
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Bergabung sejak Feb 2024
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="profileAddress">Memuat alamat...</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       KONTEN UTAMA (2 KOLOM)
+       ===================================================== -->
+  <main class="grid">
+
+    <!-- ================= KOLOM KIRI ================= -->
+    <div class="col">
+
+      <!-- BAGIAN 2: DATA KLIEN & ENTITAS BISNIS -->
+      <section class="card">
+        <div class="card-head">
+          <div class="card-title-wrap">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>
+            </div>
+            <div>
+              <h2 class="card-title">Data Klien &amp; Entitas Bisnis</h2>
+              <div class="card-sub">Detail identitas hukum dan koordinasi kontrak agensi</div>
+            </div>
+          </div>
+          <a href="#" class="link-action">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h12M3 18h8"/></svg>
+            Perbarui Data
+          </a>
+        </div>
+
+        <div class="data-grid">
+          <div>
+            <div class="data-label">Nama Lengkap</div>
+            <div class="data-value" id="profileDetailsName">Memuat...</div>
+          </div>
+          <div>
+            <div class="data-label">Surat Elektronik (Email)</div>
+            <div class="data-value" id="profileDetailsEmail">Memuat...</div>
+          </div>
+          <div>
+            <div class="data-label">Nomor Telepon / WhatsApp</div>
+            <div class="data-value" id="profileDetailsPhone">Memuat...</div>
+          </div>
+          <div>
+            <div class="data-label">Bank Pilihan</div>
+            <div class="data-value" id="profileBank">Memuat...</div>
+          </div>
+          <div>
+            <div class="data-label">Alamat</div>
+            <div class="data-value" id="profileDetailsAddress">Memuat...</div>
+          </div>
+          <div>
+            <div class="data-label">Preferensi Waktu &amp; Bahasa</div>
+            <div class="data-value">Bahasa Indonesia (WIB - UTC+7)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BAGIAN 3: PROYEK SEDANG BERJALAN -->
+      <section class="card">
+        <div class="card-head">
+          <div class="card-title-wrap">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div>
+              <h2 class="card-title">Proyek Sedang Berjalan</h2>
+              <div class="card-sub">Pantau status produksi kreatif dan revisi terkini</div>
+            </div>
+          </div>
+          <a href="#" class="link-action" style="color:#d0d0dc">Lihat Arsip →</a>
+        </div>
+
+        <!-- Proyek 1 -->
+        <div class="project">
+          <div class="project-top">
+            <div class="project-title">Brand Redesign &amp; Design System 2025 <span class="tag">Review Desain Tahap 3</span></div>
+            <div class="project-percent">78%</div>
+          </div>
+          <div class="project-desc">Fokus pada tokenisasi UI figma dan buku panduan identitas visual</div>
+          <div class="progress"><div class="progress-bar bar-purple" style="width:78%"></div></div>
+          <div class="project-bottom">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Batas Waktu Sprint: 24 Maret 2025
+            </span>
+            <a href="#">Buka Canvas Figma</a>
+          </div>
+        </div>
+
+        <!-- Proyek 2 -->
+        <div class="project">
+          <div class="project-top">
+            <div class="project-title">VISIORA 3D Interactive Web <span class="tag blue">Pengembangan Frontend</span></div>
+            <div class="project-percent">45%</div>
+          </div>
+          <div class="project-desc">Implementasi Three.js WebGL and smooth micro-interactions</div>
+          <div class="progress"><div class="progress-bar bar-blue" style="width:45%"></div></div>
+          <div class="project-bottom">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Batas Waktu Sprint: 12 April 2025
+            </span>
+            <a href="#">Buka Staging Preview</a>
+          </div>
+        </div>
+
+        <!-- Proyek 3 -->
+        <div class="project">
+          <div class="project-top">
+            <div class="project-title">Corporate Pitch Deck Motion <span class="tag green">Selesai &amp; Final Disetujui</span></div>
+            <div class="project-percent" style="color:var(--green)">100%</div>
+          </div>
+          <div class="project-desc">Presentasi 32 slide dengan render video 4K 60fps untuk investor</div>
+          <div class="progress"><div class="progress-bar bar-green" style="width:100%"></div></div>
+          <div class="project-bottom">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              Diserahterimakan pada: 18 Februari 2025
+            </span>
+            <a href="#" class="green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Unduh Paket Aset (.ZIP)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- BAGIAN 4: TIM KURATOR & AHLI PENDAMPING -->
+      <section class="card">
+        <div class="card-head">
+          <div class="card-title-wrap">
+            <div class="icon-box" style="background:#2a2145;color:var(--purple)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V4M8 4h8M8 14h.01M16 14h.01"/></svg>
+            </div>
+            <div>
+              <h2 class="card-title">Tim Kurator &amp; Ahli Pendamping</h2>
+              <div class="card-sub">Ahli yang Anda pilih dari direktori Tim Ahli VISIORA</div>
+            </div>
+          </div>
+          <span class="badge-team">Tim Terpilih</span>
+        </div>
+
+        <div class="team-wrap" id="selectedExperts" aria-live="polite">
+          <p class="team-empty">Belum ada ahli dipilih. <a href="tim%20ahli.html#tim-ahli">Pilih ahli dari Tim Ahli</a>.</p>
+          <div class="member" hidden>
+            <div class="member-avatar"><!-- <img src="clara.jpg" alt="Clara Devina"> -->CD</div>
+            <div class="member-info">
+              <div class="member-name">Clara Devina</div>
+              <div class="member-role">Lead Art Director</div>
+              <div class="member-note">8 Proyek Bersama</div>
+            </div>
+            <button class="chat-btn" aria-label="Chat Clara">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
+            </button>
+          </div>
+
+          <div class="member" hidden>
+            <div class="member-avatar"><!-- <img src="reza.jpg" alt="Reza Mahendra"> -->RM</div>
+            <div class="member-info">
+              <div class="member-name">Reza Mahendra</div>
+              <div class="member-role cyan">Senior Product Architect</div>
+              <div class="member-note">Fokus: WebGL &amp; Design System</div>
+            </div>
+            <button class="chat-btn" aria-label="Chat Reza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= KOLOM KANAN (SIDEBAR) ================= -->
+    <aside class="col">
+
+      <!-- BAGIAN 5: STATISTIK KERJASAMA -->
+      <section class="card" style="padding:18px 16px">
+        <div class="side-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg>
+          STATISTIK KERJASAMA
+        </div>
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-label">Proyek Aktif</div>
+            <div class="stat-number purple">3</div>
+            <div class="stat-note">2 dalam sprint</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Aset Disetujui</div>
+            <div class="stat-number blue">128</div>
+            <div class="stat-note">+14 minggu ini</div>
+          </div>
+        </div>
+        <div class="stat-box stat-wide">
+          <div>
+            <div class="stat-label">On-Time Delivery Rate</div>
+            <div class="stat-number green" style="font-size:20px">99.4%</div>
+          </div>
+          <div class="gauge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- BAGIAN 6: SESI & KEAMANAN AKUN -->
+      <section class="card" style="padding:18px 16px">
+        <div class="sec-head">
+          <div class="side-title">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            SESI &amp; KEAMANAN AKUN
+          </div>
+          <span class="badge-2fa">2FA Aktif</span>
+        </div>
+        <div class="session-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <div>
+            <div class="session-name">macOS Sequoia • Safari 18.2</div>
+            <div class="session-loc">Jakarta, Indonesia (Sesi Sekarang)</div>
+            <div class="session-ip">IP: 182.253.14.88</div>
+          </div>
+        </div>
+        <div class="twofa-row">
+          Verifikasi Dua Langkah:
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Google Authenticator
+          </span>
+        </div>
+        <button class="btn-outline">Keluar Dari Semua Sesi Lain</button>
+      </section>
+
+      <!-- BAGIAN 7: PENYIMPANAN CLOUD KLIEN -->
+      <section class="card" style="padding:18px 16px">
+        <div class="storage-head">
+          <div class="side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+            PENYIMPANAN CLOUD KLIEN
+          </div>
+          <span class="tier">Tier Pro 50 GB</span>
+        </div>
+        <div class="storage-row"><b>Terpakai: 14.2 GB</b><span class="pct">28.4%</span></div>
+        <div class="storage-bar"><div class="storage-fill"></div></div>
+        <div class="storage-desc">Mencakup raw footage .RAW, export ProRes 422, dan asset 3D .GLTF.</div>
+
+        <div class="file">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+            VISIORA_NDA_Signed.pdf
+          </span>
+          <svg class="dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </div>
+        <div class="file">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"/></svg>
+            Brand_Assets_Pack_v2.zip
+          </span>
+          <svg class="dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </div>
+
+        <button class="btn-outline btn-upload">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3-3 3 3"/></svg>
+          Kirim File Tambahan
+        </button>
+      </section>
+
+      <!-- BAGIAN 8: DEDICATED CONCIERGE -->
+      <section class="concierge">
+        <div class="concierge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        </div>
+        <h3>Dedicated Concierge</h3>
+        <p>Butuh penambahan sprint mendadak atau meeting tatap muka bersama creative director?</p>
+        <button class="btn-light">Hubungi Tim Kurator</button>
+      </section>
+    </aside>
+  </main>
+
+  <!-- =====================================================
+       BAGIAN 9: FOOTER
+       ===================================================== -->
+  <footer>
+    <div class="footer-left">
+      <span class="logo">VISIORA</span>
+      <span class="dot"></span>
+      <span>© 2025 VISIORA Creative Agency. All rights reserved. Platform Manajemen Eksklusif.</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#">Kebijakan Privasi</a>
+      <a href="#">Syarat &amp; Ketentuan</a>
+      <a href="#">Bantuan Portal</a>
+      <a href="#">Kurator Tim</a>
+    </nav>
+  </footer>
+</div>
+
+<!-- =========================================================
+     BAGIAN 10: JAVASCRIPT (interaksi tombol sederhana)
+     ========================================================= -->
+<script src="profile.js"></script>
+</body>
+</html>

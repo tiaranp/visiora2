@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VISIORA - Pembayaran Berhasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sukses.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M9 12l2 2 4-4"/></svg>
+      </span>
+      VISIORA
+    </a>
+
+    <nav class="nav-links">
+      <a href="#">Beranda</a>
+      <a href="#">Kontak</a>
+      <a href="#">Portofolio</a>
+      <a href="#">Layanan</a>
+      <a href="#">Tim Ahli</a>
+      <a href="#">Tentang</a>
+    </nav>
+
+    <div class="nav-right">
+      <button class="btn-start">Mulai Proyek</button>
+      <div class="btn-user">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6z"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <main class="container">
+    <section class="card">
+
+      <!-- Badge atas -->
+      <div class="top-row">
+        <div class="badge-success">
+          <span class="dot"></span>
+          PEMBAYARAN BERHASIL DIVERIFIKASI
+        </div>
+        <div class="badge-bank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3dd6f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+          Bank Indonesia Escrow Engine
+        </div>
+      </div>
+
+      <!-- Ikon centang -->
+      <div class="check-wrap">
+        <div class="check-box">
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <h1>Pembayaran Berhasil!</h1>
+      <p class="subtitle">
+        Transaksi Anda telah divalidasi oleh Bank Indonesia dan dialokasikan ke dalam VISIORA Escrow Vault secara realtime.
+      </p>
+
+      <!-- Panel detail transaksi -->
+      <div class="panel">
+        <div class="total-box">
+          <div>
+            <div class="label-sm">Total Dana Diamankan</div>
+            <div class="amount-row">
+              <div class="amount" id="amount">Rp 47.450.000</div>
+              <span class="badge-lunas">Lunas Otomatis</span>
+            </div>
+          </div>
+          <div class="ref">
+            <div class="label-sm normal-case">ID Referensi Pesanan</div>
+            <div class="id" id="orderId">#VSR-2026-8891</div>
+          </div>
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="label">Metode Pembayaran</div>
+            <div class="value">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3dd6f5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path d="M8 8l8 8M16 8l-8 8"/></svg>
+              QRIS (GPN / Bank Indonesia &amp; e-Wallet)
+            </div>
+          </div>
+          <div>
+            <div class="label">Nomor Transaksi (RRN)</div>
+            <div class="value" id="rrn">QRIS-992810482910</div>
+          </div>
+          <div>
+            <div class="label">Nama Merchant</div>
+            <div class="value">VISIORA Creative Holding Ltd.</div>
+          </div>
+          <div>
+            <div class="label">Waktu Transaksi</div>
+            <div class="value" id="trxTime">28 Oktober 2026, 14:18 WIB</div>
+          </div>
+        </div>
+
+        <div class="lead">
+          <div class="label">Project Lead Director</div>
+          <div class="lead-info">
+            <div class="avatar" data-checkout-expert-initials>VA</div>
+            <span class="lead-name" data-checkout-expert-name>Tim Ahli VISIORA</span>
+            <span class="lead-role">(Brand Strategy &amp; Web Experience)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info escrow -->
+      <div class="escrow">
+        <div class="lock-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3dd6f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+        </div>
+        <div>
+          <div class="escrow-head">
+            <span class="escrow-title">Escrow Retainer Aktif</span>
+            <span class="tag">Kontrak Hukum &amp; NDA 256-bit</span>
+          </div>
+          <p>Workspace Notion dan kanal kolaborasi Slack private proyek Anda kini telah dibuka dan diatur secara otomatis dengan kredensial terdaftar.</p>
+        </div>
+      </div>
+
+      <!-- Tombol unduh -->
+      <button class="btn-download" id="btnDownload">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9c8ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+        Unduh Bukti Resmi (PDF &amp; e-Meterai)
+      </button>
+
+      <a href="#" class="back" id="btnBack">Kembali ke beranda</a>
+
+    </section>
+  </main>
+
+  <script src="payment-expert.js"></script>
+  <script src="sukses.js"></script>
+</body>
+</html>
